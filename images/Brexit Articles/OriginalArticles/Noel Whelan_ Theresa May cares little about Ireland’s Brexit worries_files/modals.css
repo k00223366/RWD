@@ -1,0 +1,363 @@
+/* ======================================================= */
+/* The Irish Times - Account Modals
+/* Paul Redmond - predmond@irishtimes.com
+/* ======================================================= */
+
+#lLogin,
+#vfScreenname{
+	font-family: Arial, sans-serif;
+	font-weight: 800;
+	color: #666;
+}
+
+#lLogout{
+	font-family: Arial, sans-serif;
+	font-weight: 800;
+}
+
+#vfScreenname,
+#lLogout{
+	display: none; /* Initial Hiding */
+}
+
+.remodal.remodel-comments{
+	background: #FFF;
+}
+
+.remodel-comments .it-logo{
+	text-align: center;
+	margin-bottom: 10px;
+}
+.remodel-comments .it-logo img{
+	width: 260px;
+}
+.remodel-comments h4{
+	font-size: 24px;
+	font-family: "DINWeb-Bold", Arial, Helvetica, sans-serif;
+	margin-bottom: 14px;
+	color: #444;
+}
+.remodel-comments .content p{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 3px 0;
+}
+.remodel-comments p.no-account{
+	font-size: 16px;
+}
+.remodel-comments .content p.note{
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 0;
+	margin-bottom: 15px;
+}
+.remodel-comments .content div.group{
+	margin-bottom: 10px;
+}
+.remodel-comments .content form label{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333333;
+}
+.remodel-comments .content .server-error-return{
+	display: none;
+	color: #b94a48;
+	background-color: #f2dede;
+	border: 1px solid #eed3d7;
+	padding: 8px 35px 8px 14px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	margin-bottom: 10px;	
+}
+
+.remodel-comments .content .server-error-return a{
+	color: #b94a48;
+	text-decoration: underline;
+}
+
+.remodel-comments .content form label.error:before,
+.remodel-comments .content form label.valid:before{
+	font-size: 18px;
+	margin-right: 4px;
+	font-weight: bold;
+}
+
+.remodel-comments .content form label.error:before,
+.remodel-comments .content form label.valid:before{
+	content: "·";
+}
+
+.remodel-comments .content form label.error,
+.remodel-comments .content form label.valid{
+	padding: 3px 0;
+	margin-bottom: 20px;
+	font-size: 13px;
+	font-weight: 500;
+}
+.remodel-comments .content form label.error{
+	color: #C09853;
+}
+.remodel-comments .content form label.valid{
+	color: #C09853;
+}
+.remodel-comments .content form label.checkbox{
+	font-size: 13px;
+}
+.remodel-comments input[type="text"],
+.remodel-comments input[type="password"],
+.remodel-comments input[type="number"],
+.remodel-comments input[type="email"] {
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+	padding: 8px;
+	font-size: 14px;
+	background-color: #F7F7F7;
+	border: 1px solid #cccccc;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+	transition: border linear 0.2s, box-shadow linear 0.2s;		
+	width: 260px;
+}
+.remodel-comments .content form input:focus{
+	border-color: rgba(82, 168, 236, 0.8);
+	outline: 0;
+	outline: thin dotted \9;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+.remodel-comments .content .it-btn{
+	margin: 10px 20px 20px 0;
+	padding: 9px 16px 5px 16px;
+	display: inline-block;
+	font-weight: 800;
+	font-family: "DINWeb-Bold", Arial,sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	text-transform: uppercase;
+	text-align: center;
+}
+.remodel-comments .content .btn-signin{
+	background: #3989CF;
+	border: 1px solid #2E6FA9;
+	color: #FFF;
+}
+.remodel-comments .content .btn-signin:hover{
+	background: #3071A9;
+	border-color: #285E8E;
+}
+.remodel-comments .content .btn-close{
+	background: #EEE;
+	color: #555;
+	border: 1px solid #AAA;
+}
+.remodel-comments .content .btn-close:hover{
+	background: #DDD;
+	border-color: #888;
+}
+.remodel-comments .content .help-block{
+	font-size: 13px;
+	font-family: Arial, sans-serif;
+}
+.remodel-comments .content div.half{
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	margin-right: -4px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.remodel-comments .content form .half.right{
+	float: none;
+	padding-left: 10px;
+}
+.remodel-comments .content form .group.screenname input{
+	width: 200px;
+}
+.remodel-comments .content form .half input,
+.remodel-comments .content form .half label{
+	width: 200px;
+}
+.remodel-comments .content form .half label.error,
+.remodel-comments .content form .half label.valid{
+	width: 145px;
+}
+
+/* Layout Breaking Fix - Mobile */
+@media only screen and (max-width: 520px) and (-webkit-min-device-pixel-ratio: 1) {
+	
+	.remodal-overlay{
+		position: absolute;
+	}
+
+	.remodal-overlay .remodal{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	
+}
+/* END FIX */
+
+@media only screen and (max-width: 520px){
+
+	.remodal.remodel-comments{
+	  -webkit-border-radius: 0;
+	  border-radius: 0;
+	  background: #FFF;
+	  padding: 30px 15px;
+	}
+
+	/* Oversized checkboxes */
+	.remodel-comments .content form input[type="checkbox"] {
+	    -webkit-transform: scale(1.5);
+	    margin-left: -24px;
+	}
+
+	.remodel-comments .content form .checkbox{
+	    margin-bottom: 10px;
+	    padding: 4px 0 4px 28px;
+	}
+
+	.remodel-comments .it-logo img{
+		width: 220px;
+	}
+
+	.remodel-comments input[type="text"],
+	.remodel-comments input[type="password"],
+	.remodel-comments input[type="number"],
+	.remodel-comments input[type="email"] {
+		width: 270px;
+	}
+
+	.remodel-comments .content .help-block{
+		font-size: 12px;
+	}		
+
+	.remodel-comments .content form label.error,
+	.remodel-comments .content form label.valid{
+		width: 245px;
+	}
+
+	.remodel-comments .content div.half{
+		display: block;
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.remodel-comments .content form .half.right{
+		padding-left: 0;
+	}
+
+	.remodel-comments .content form .group.screenname input{
+		width: 270px;
+	}
+
+	.remodel-comments .content form .half input,
+	.remodel-comments .content form .half label{
+		width: 270px;
+	}
+
+	.remodel-comments .content form .half label.error,
+	.remodel-comments .content form .half label.valid{
+		width: 245px;
+	}
+
+}	
+
+/* Desktop */
+@media only screen and (min-width: 521px) {	
+
+	.remodal.remodel-comments{
+			background: #FFF;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        max-width: 500px;		
+        margin: 20px auto;
+        padding: 20px;
+        min-height: 0;
+    }
+
+	select, textarea, input[type="text"], input[type="tel"], input[type="password"]{
+		margin-bottom: 6px;
+	}
+    
+}
+
+/* Layout Breaking Fix - Small Tablets */
+@media only screen and (min-width: 521px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)  {
+
+	/* Oversized checkboxes */
+	.remodel-comments .content form input[type="checkbox"] {
+	    -webkit-transform: scale(1.5);
+	    margin-left: -24px;
+	}	
+
+	html.touch.remodal_lock,
+	html.touch body.remodal_lock {
+	    overflow: hidden !important;
+	}
+
+	.remodal-overlay{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.remodal-overlay .remodal{
+		position: absolute;
+		top: 0px;
+		left: 50%;
+		margin-left: -250px;
+	}
+}	
+
+/* Retina */
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+
+	/*  Prevents zoom */
+		.remodel-comments input[type="text"],
+		.remodel-comments input[type="password"],
+		.remodel-comments input[type="number"],
+		.remodel-comments input[type="email"] {
+		font-size: 16px;
+	}
+}
+
+/* IE */
+/*html.lt-ie9,
+html.lt-ie9 body{	
+	min-height:100%;
+	overflow: auto !important;
+	margin: 0;
+}*/
+
+.lt-ie9 .remodal-overlay {
+	background: url(/static/account/img/modal-ie8.png);
+}
+
+.lt-ie9 .remodal.remodel-comments{
+	width: 460px;
+	min-height: auto;
+}
+.viafoura option[value="editor-picks"] {
+    display: none !important;
+}

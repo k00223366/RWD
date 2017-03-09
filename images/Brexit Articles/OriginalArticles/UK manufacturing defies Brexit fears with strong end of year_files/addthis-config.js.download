@@ -1,0 +1,47 @@
+// Custom js to handle AddThis social bookmarking
+var addthis_config = {
+	data_track_linkback: true, //Set to true to allow us to append a variable to your URLs upon sharing. Use this to track how many people come back to your content via links shared with AddThis. Highly recommended. Always global.
+	//data_track_addressbar:true,  //adds extra chars to the end of all URLs to track if someone copies & pastes your url into e.g. their email and the recipient visits the site via this URL
+
+	services_compact: 'email, facebook, twitter, linkedin, pinterest_share, reddit, more',
+	services_exclude: 'print',
+	ui_cobrand: 'irishtimes.com',
+
+	// integrate with GA
+	data_ga_property: 'UA-850873-2',
+	data_ga_social: true,
+
+	url_transforms: {
+		shorten: {
+			twitter: 'bitly'
+		}
+	},
+
+	shorteners : {
+		bitly : {}
+	}
+};
+
+var addthis_share = {
+	// http://support.addthis.com/customer/portal/articles/683399-changes-to-how-twitter-works-with-addthis
+	passthrough : {
+		twitter: {
+			via: _ittwitterhandle,
+			text: _itarticleHeadline,  //available in polopoly article
+			related: "@"+_ittwitterhandle
+		}
+	},
+	
+	
+	url_transforms: {
+		clean: true,
+		remove: ['cmpid', 'via']
+	}
+};
+
+/*add count url to tweet button*/
+var tweet_button = document.getElementById('tweet_button');
+if(tweet_button){
+	tweet_button.setAttribute('tw:counturl', _itarticleURL);
+}
+//console.log( _itarticleURL);

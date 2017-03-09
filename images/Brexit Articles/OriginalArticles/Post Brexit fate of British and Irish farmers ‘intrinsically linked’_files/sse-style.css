@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin: 0px;
+}
+.bg {
+	padding: 10px;
+	background: #FCF8E3;
+	width: 300px;
+	height: 250px;
+	border:1px solid #FBEED5;
+	box-sizing:border-box;
+}
+.container {
+	position:relative;
+	left:0;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+.sponsored-img-sse {
+	position: relative;
+	top: 0;
+	left: 0;
+	height:140px;
+	overflow:hidden;
+	
+}
+
+.sponsored-img-sse img {
+	width: 280px;
+	}
+	
+.sponsored-header-sse {
+	position: relative;
+	display: block;
+	top: 8px;
+	width: 280px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 15px;
+}
+.sponsored-header-sse a {
+	color: #000;
+}
+.sponsored-header-sse a:hover {
+	color: #039;
+}
+.sponsored-header-sse a: active {
+}
+.sponsored-header-sse a: visited {
+	color: #000;
+}
+.sponsored-caption-sse {
+	position: relative;
+	display: block;
+	top: 14px;
+	left: 0;
+	width: 300px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	color: #515151;
+}
+.sponsored-caption-sse a {
+	color: #000;
+}
+.sponsored-caption-sse a:hover {
+	color: #039;
+}
+.sponsored-caption-sse a: active {
+	color: #039;
+}
+.sponsored-caption-sse a: visited {
+	color: #000;
+}
+.sponsored-tags {
+	position:fixed;
+	top:210px;
+	display: inline;
+	width: 280px;
+}
+.sponsored-sponsor {
+	position: relative;
+	float:right;
+	left: -50px;
+	width: 300px;
+	text-align: right;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 10px;
+	margin-top: 8px;
+	color: #515151;
+}
+.sponsored-sponsor:after {
+	position: absolute;
+	display: inline-block;
+	content: "";
+	background: url('sse-logo.jpg');
+	margin-top: -16px;
+	margin-left: 10px;
+	width: 40px;
+	height: 40px;
+}

@@ -1,0 +1,237 @@
+/**
+ * Plugin to intercept Viafoura login action.
+ * Displays a 'Terms and Conditions' accept modal.
+ * 
+ * <b>Usage</b>:
+ * new tncModal(configObject).inject();
+ * 
+ * <b>Configuration</b>:
+ * jQuery       = Pass the jQuery object
+ * vfObject     = Pass the Viafoura object (usually window.viafoura)
+ *                Make sure this happens within vfAsyncInit()
+ *                
+ * modalSel     = Selector to grab the modal DOM object
+ * buttonSel    = Selector to hook Viafoura actions/buttons
+ * acceptSel    = Selector to grab the 'I agree' action
+ * disagreeSel  = Selector to grab the 'Cancel' action
+ * 
+ * autoInit     = Boolean; default:true to fire init() on construct()
+ * 
+ * @author Johnny iplesca@irishtimes.com
+ * @returns tncModal
+ */
+var tncModal = function () {
+    var me = this;
+    
+    me.jQuery           = null;
+    me.vfObject         = null;
+    /**
+     * Fires init() on object creation
+     */
+    me.autoInit         = true;
+    /**
+     * jQuery modal object
+     */
+    me.modal            = null;
+    me.hasAcceptedTnC   = false;
+    /**
+     * Selector for hooking Viafoura buttons
+     */
+    me.vfSelector       = '';
+    /**
+     * Selector for the modal DOM object
+     */
+    me.modalSelector    = '';
+    /**
+     * Selector for the 'I agree' action
+     */
+    me.acceptSelector   = '';
+    /**
+     * Selector for the 'Cancel' action
+     */
+    me.disagreeSelector = '';
+    me.innerModalSel    = '.vf-inner-modal';
+    me.modalContent     = '.vf-inner-modal';
+ 
+    /**
+     * Sets provided config (if any).
+     * Fires init() (if autoInit)
+     */
+    me.constructor = function () {
+        if (arguments[0]) {
+            me.setOptions.call(me, arguments[0]);
+        }
+        if (me.autoInit) {
+            me.init();
+        }
+        return this;
+    }
+    me.setOptions = function (opt) {
+        if (opt && "object" == typeof opt) {
+            for (p in opt) {
+                me.setOption(p, opt[p]);
+            }
+        }
+    }
+    me.setOption = function (opt, value) {
+        if ('jQuery' == opt) {
+            me.jQuery = value;
+        }
+        if ('vfObject' == opt) {
+            me.vfObject = value;
+        }
+        if ('autoInit' == opt) {
+            me.autoInit = value;
+        }
+        if ('buttonSel' == opt) {
+            me.vfSelector = value;
+        }
+        if ('modalSel' == opt) {
+            me.modalSelector = value;
+        }
+        if ('acceptSel' == opt) {
+            me.acceptSelector = value;
+        }
+        if ('disagreeSel' == opt) {
+            me.disagreeSelector = value;
+        }
+        if ('modalContent' == opt) {
+            me.modalContent = value;
+        }
+    }
+    /**
+     * @private 
+     */
+    me.init = function () {
+        me.jQuery('body').append(me.modalContent);
+        me.modal = me.jQuery(me.modalSelector);
+        
+        me.modal.find(me.acceptSelector).click(function (e) {
+            me.acceptTnC(true);
+            
+            e.stopImmediatePropagation();
+            e.stopPropagation();
+            e.preventDefault();
+        });
+        me.modal.find(me.disagreeSelector).click(function () {
+            me.acceptTnC(false);
+        });
+        
+        me.handleResize();
+        me.jQuery(window).on('resize', me.handleResize);
+    }
+    me.handleResize = function () {
+        var o = arguments[1] || false;
+        var e = me.jQuery(window),
+            n = o || me.modal.find(me.innerModalSel),
+            r, i;
+    
+        r = (e.height() - n.outerHeight()) / 2 + e.scrollTop();
+        i = (e.width() - n.outerWidth()) / 2 + e.scrollLeft();
+        n.css({
+            top: (r < 0 ? 0 : r) + "px",
+            left: (i < 0 ? 0 : i) + "px"
+        })
+    };
+    /**
+     * Hooks Viafoura buttons.
+     * Registers for onLoginSuccess and onLogoutSuccess to enforce ToC accept modal
+     * 
+     * @public 
+     */
+    me.inject = function () {
+        me.vfObject.subscribe('onLoginRequired', function () {
+            // hide the VF login until needed
+            me.jQuery('.viafoura:not(#acceptTocModal) .vf-modal').hide();
+            me.modal.fadeIn();
+            me.handleResize();
+        });
+        
+        if (me.haveUser()) {
+            me.hasAcceptedTnC = true;
+        }
+        if (!me.hasAcceptedTnC) {
+            me.hookButtons(true);
+        }
+        me.vfObject.subscribe('onLogoutSuccess', function () {
+            me.hasAcceptedTnC = false;
+            me.hookButtons(true);
+        });
+        me.vfObject.subscribe('onLoginSuccess', function () {
+           me.hasAcceptedTnC = true;
+           me.hookButtons(false);
+           me.adjustVfLogin(false);
+        });
+    }
+    /**
+     * Closes the modal.
+     * On opt:true, calls the Viafoura ui.login.show() API
+     * @private 
+     */
+    me.acceptTnC = function (opt) {
+        me.modal.fadeOut();
+        if (true == opt) {
+            me.jQuery('.viafoura:not(#acceptTocModal) .vf-modal').fadeIn();
+            me.vfObject.ui.login.show();
+            me.adjustVfLogin(true);
+            
+            me.jQuery('.vf-modal-close').one('click.modal', function () {
+                setTimeout(function () {
+                    me.adjustVfLogin(false);
+                }, 500);
+                
+            });
+        } else {
+            me.adjustVfLogin(false);
+        }
+    }
+    me.adjustVfLogin = function (opt) {
+        var vf = me.jQuery('.viafoura:not(#acceptTocModal)');
+        
+        if (!opt) {
+            vf.removeAttr('id');
+        } else {
+            vf = vf.attr('id', 'loginSmall').find('.vf-modal');
+
+            vf.find('.vf-login-options .vf-viafoura-login').parents('li').html('');
+            vf.find('.vf-sidebar').css('width', '100%');
+            vf.find('.vf-content').remove();
+
+            me.handleResize(null, vf.find('.vf-inner-modal'));
+        }
+    }
+    /**
+     * On opt:true, binds a namespaced click event to the provided Viafoura buttons
+     * Dev note: do not try to delegate, event bubbling will occur and cannot be stopped
+     * 
+     * @private 
+     */
+    me.hookButtons = function (opt) {
+        if (true == opt) {
+            
+            me.jQuery(me.vfSelector).bind('click.modal', function (e) {
+                if (!me.hasAcceptedTnC) {
+                    me.modal.fadeIn();
+                    me.handleResize();
+
+                    e.stopImmediatePropagation();
+                    e.stopPropagation();
+                    e.preventDefault();
+                }
+            } );
+        } else {
+            me.jQuery(me.vfSelector).unbind('click.modal');
+        }
+    }
+    /**
+     * Checks if Viafoura has a logged in user
+     * @private 
+     */
+    me.haveUser = function () {
+        var vf = me.vfObject.users.current(), result;
+        result = ('guest' == vf.username && 'Guest' == vf.name) ? false : true;
+        return result;
+    }
+    // fire Maringo, fire'em away...
+    me.constructor.call(null, arguments[0]);
+}   

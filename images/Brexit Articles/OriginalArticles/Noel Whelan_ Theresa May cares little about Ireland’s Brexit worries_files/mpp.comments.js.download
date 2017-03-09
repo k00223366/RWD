@@ -1,0 +1,255 @@
+/**
+ * @description MPP module: Comments
+ * Implements client functionality for consuming the MPP REST API
+ * 
+ * Methods:
+ * > forgot
+ * > login
+ * > logout
+ * > register
+ * > update
+ * > validate
+ * 
+ * @author Johnny <iplesca@irishtimes.com>
+ * 
+ * @param {Object} $ jQuery
+ * @param {Object} m Module definition
+ */
+;(function ($, m) {
+    /**
+     * Set module name
+     */
+    var NAME = 'comments';
+    
+    var l = 'mppLoadedModules', r = 'mppRestClient';
+    if ($ && undefined !== $[r]) {
+        $[r]().registerModule(NAME, m);
+    } else {
+        window[l] = (undefined === window[l] ? {} : window[l]);
+        window[l][NAME] = m;
+    }
+}( "undefined" != typeof window['jq'] ? jq : jQuery, function ($) {
+    /**
+     * Set module' service-endpoint
+     */
+    this._service = 'comments/';
+    
+    this.forgot = function () {
+        var data = this.fetchParams(arguments, ['email']);
+
+        if (null != data.email) {
+            this.apiCall({
+                verb  : 'POST',
+                action: 'forgot',
+                data  : data
+            });
+        }
+    };
+    this.login = function () {
+        var data = this.fetchParams(arguments, ['username', 'password', 'deviceid', 'persistent']);
+
+        if (null != data.username && null != data.password) {
+            data.deviceid = $.md5(navigator.userAgent);
+            data.persistent = 'on';
+
+            this.apiCall({
+                verb  : 'POST',
+                action: 'login',
+                data  : data
+            });
+        }
+    };
+    this.logout = function () {
+        var data = this.fetchParams(arguments, ['session_token']);
+        if (null != data.session_token) {
+            this.apiCall({
+                verb  : 'GET',
+                action: 'logout',
+                append: '/' + data.session_token,
+                data  : {}
+            });
+        }
+    };
+    this.register = function () {
+        var data = this.fetchParams(arguments, ['firstname', 'surname', 'screenname', 'email', 'confirmemail', 'password', 'confirmpassword', 'terms', 'receivemarketing']);
+
+        this.apiCall({
+            verb  : 'POST',
+            action: 'register',
+            data  : data
+        });
+    };
+    this.update = function () {
+        var data = this.fetchParams(arguments, ['sid', 'screenname']);
+        if (null != data.sid) {
+            this.apiCall({
+                verb  : 'POST',
+                action: 'update',
+                data  : data
+            });
+        }
+    },
+    this.validate = function () {
+        var data = this.fetchParams(arguments, ['session_token']);
+        if (null != data.session_token) {
+            this.apiCall({
+                verb  : 'GET',
+                action: 'validate',
+                append: '/' + data.session_token,
+                data  : {}
+            });
+        }
+    },
+    this.results = {
+        forgot : {
+            success : function () {
+                return true;
+            },
+            error : function () {
+                var p = this.fetchParams(arguments, ['error']);
+                var r = {
+                    message : 'Service not available. Please retry the operation in a short while.',
+                    code : p.error,
+                    passthru : true
+                }
+                return r;
+            }
+        },
+        login : {
+            /**
+             * @returns {Object} object containing 'session_token', 'email', 'uid', 'displayName'
+             */
+            success : function () {
+                return this.fetchParams(arguments, ['session_token', 'email', 'uid', 'displayName', 'firstname', 'surname', '_catch']);
+            },
+            error : function () {
+                var p = this.fetchParams(arguments, ['error']);
+                var r = {
+                    message : '',
+                    code : p.error,
+                    passthru : false
+                };
+                switch (parseInt(p.error, 10)) {
+                     case 1: {
+                         r.message = 'Please fill all required fields';
+                         break; }
+                     case 2: 
+                     case 3: {
+                         r.message = 'Incorrect username or password';
+                         break; }
+                     case 4: {
+                         r.message = 'Subscription not active';
+                         break; }
+                     case 5: {
+                         r.message = 'You have reached the maximum number of concurrent logins. Please log off on other devices';
+                         break; }
+                     case 7: {
+                         r.message = '';
+                         r.passthru = true;
+                         break; }
+                     default: {
+                         r.message = 'Service not available. Please retry the operation in a short while.'
+                         break; }
+                }
+                return r;
+           }
+        },
+        logout : {
+            success : function () {
+                return true;
+            },
+            error : function () {
+                var r = {
+                    message : 'Service not available. Please retry the operation in a short while.',
+                    code     : -1,
+                    passthru : false
+                };
+                return r;
+            }
+        },
+        register : {
+            success : function () {
+                return this.fetchParams(arguments, ['_catch']);
+            },
+            error : function () {
+                var p = this.fetchParams(arguments, ['error']);
+                var r = {
+                    message : '',
+                    code : p.error,
+                    passthru : false
+                };
+                switch (parseInt(p.error, 10)) {
+                     case 2: {
+                         r.message = 'Please fill all required fields with valid values';
+                         break; }
+                     case 6: {
+                         r.message = 'This email address is already registered, please <a href="#" id="jmpSignIn">sign in</a> or <a href="#" id="jmpForgotPassword">reset your Password</a>?';
+                         break; }
+                     case 10: {
+                         r.message = 'Account already exists with this email address';
+                         r.passthru = true;
+                         break; }
+                     default: {
+                         r.message = 'Service not available. Please retry the operation in a short while.'
+                         break; }
+                }
+                return r;
+            }
+        },
+        update : {
+            success : function () {
+                return this.fetchParams(arguments, ['session_token', 'email', 'uid', 'displayName', 'firstname', 'surname']);
+            },
+            error : function () {
+                var p = this.fetchParams(arguments, ['error']);
+                var r = {
+                    message : '',
+                    code : p.error,
+                    passthru : false
+                };
+                switch (parseInt(p.error, 10)) {
+                     case 1: 
+                     case 2: {
+                         r.message = 'Please fill all required fields with valid values';
+                         break; }
+                     case 8: {
+                         r.message = 'Screen name was already defined';
+                         break; }
+                     default: {
+                         r.message = 'Service not available. Please retry the operation in a short while.'
+                         break; }
+                }
+                return r;
+            }
+        },
+        validate : {
+            /**
+             * @returns {Object} object containing 'session_token', 'email', 'uid', 'displayName'
+             */
+            success : function () {
+                return this.fetchParams(arguments, ['session_token', 'email', 'uid', 'displayName', 'firstname', 'surname']);
+            },
+            error : function () {
+                var p = this.fetchParams(arguments, ['error']);
+                var r = {
+                    message : '',
+                    code : p.error,
+                    passthru : false
+                };
+                switch (parseInt(p.error, 10)) {
+                     case 1: 
+                     case 2: 
+                     case 3:
+                     case 4:
+                     case 5: {
+                         r.message = 'User session has expired';
+                         break; }
+                     default: {
+                         r.message = 'Service not available. Please retry the operation in a short while.'
+                         break; }
+                }
+                return r;
+           }
+        }
+    }
+}));

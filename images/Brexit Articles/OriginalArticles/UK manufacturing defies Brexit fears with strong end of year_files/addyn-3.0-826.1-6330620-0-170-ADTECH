@@ -1,0 +1,7 @@
+document.write("<DIV style=\"position: relative; display: inline-block;\">\n");
+document.write("<IFRAME NAME=\"ADTECH_IFRAME5_6330620\" ID=\"ADTECH_IFRAME5_6330620\" WIDTH=\"300\" HEIGHT=\"250\" BORDER=\"0\" SCROLLING=\"No\" FRAMEBORDER=\"0\" MARGINHEIGHT=\"0\" MARGINWIDTH=\"0\" SRC=\"http://aka-cdn-ns.adtech.de/apps/425/Ad16989097St3Sz170Sq111048181V1Id1/sponsored-section-sse.html?&rnd=914292367\"></IFRAME>\n");
+document.write("<A style=\"position: absolute; width: 100%; height: 100%; top: 0; left: 0; text-decoration: none; z-index: 10; background-color: #FFF; opacity: 0; filter: alpha(opacity=1);\" href=\"http://adserver.adtech.de/adlink|826|6330620|0|170|AdId=16989097;BnId=1;itime=914292367;nodecode=yes;link=http://www.irishtimes.com/sponsored/sse-airtricity/life-on-the-reeks-a-photographer-s-tale-of-nature-and-savage-beauty-1.2953739\" target=\"_blank\"></A>\n");
+document.write("</DIV>\n");
+
+var adcount_6330620_1_=new Image();
+adcount_6330620_1_.src="http://adserver.adtech.de/adcount|2.0|826|6330620|0|170|AdId=16989097;BnId=1;ct=909638243;st=3906;adcid=1;itime=914292367;reqtype=5;;";

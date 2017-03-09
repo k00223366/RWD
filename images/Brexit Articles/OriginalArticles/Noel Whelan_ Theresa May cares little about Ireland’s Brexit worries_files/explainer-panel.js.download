@@ -1,0 +1,40 @@
+// For the explainer panel
+
+jq(document).ready(function(){
+ 
+  jq('.explainer-feedback input[type="radio"]').each(function() {
+          jq(this).click(function(){
+                if (jq(this).is(':checked')){
+                   jq(this).siblings().attr('disabled', true)
+		jq('.explainer-feedback').addClass('submitted')
+	jq('.explainer-feedback span').html('Thanks for your feedback')
+
+          } 
+             })
+                 var label = window.location.href
+        var titles = jq('.explainer-panel h4').text();
+   	jq(this).addClass("gtm-event");
+    jq(this).attr( {"data-evt-category":"Explainer Panels" , "data-evt-label": titles + " on " + label  } )
+  });   
+ })
+
+
+jq(window).smartscroll(function(){
+	if (jq('.explainer-panel').visible( false, true )) {
+           if(!jq('.explainer-panel').hasClass('on-screen')){
+        var label = window.location.href
+        var titles = jq('.explainer-panel h4').text();
+        jq('.explainer-panel').addClass('on-screen');  
+dataLayer.push({
+                    'category': 'Explainer Panels',
+                    'action': 'Explainer Panel On Screen',
+                    'label': 'Explainer Panel on Screen'+titles+' on '+label
+                }, {'event': 'data-layer-event'});
+      
+         }
+    } else {
+        jq('.explainer-panel').removeClass('on-screen');
+    }
+});
+
+

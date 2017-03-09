@@ -1,0 +1,213 @@
+/* Id: 7.3747385.1471968867
+ * Generated: 12-Feb-2017 15:43:38
+ */
+    .explainer-panel {
+  float: left;
+  width: 35%;
+  border-top: 2px solid #E6E6E6;
+  border-bottom: 2px solid #E6E6E6;
+  margin-right: 20px;
+  margin-bottom:1em;
+  font-family: "Helvetica", Arial, sans-serif;
+  padding: 0 8px 15px 8px;
+  position: relative;
+  box-sizing: border-box;
+  z-index:0;
+}
+
+.explainer-panel:before,
+.explainer-panel:after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+}
+
+.explainer-panel:before {
+  top: -2px;
+}
+
+.explainer-panel:after {
+  bottom: -2px;
+  right: 0;
+}
+
+.explainer-panel h4 {
+  font-size: 16px;
+  padding: 15px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.explainer-panel h4:before,
+.explainer-feedback:after {
+  content: "";
+  height: 250%;
+  left: -15px;
+  background-color: none;
+  width: 30%;
+  display: block;
+  position: absolute;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-color: #CC0000;
+  top: -2px;
+}
+.explainer-panel h4:before{
+ height:200%;
+}
+.news .explainer-panel h4:before,
+.news .explainer-feedback:after {
+  border-color: #CC0000;
+}
+
+.business .explainer-panel h4:before,
+.business .explainer-feedback:after {
+  border-color: #1190af;
+}
+
+.sport .explainer-panel h4:before,
+.sport .explainer-feedback:after {
+  border-color: #3ea447;
+}
+
+.debate .explainer-panel h4:before,
+.debate .explainer-feedback:after {
+  border-color: #777552;
+}
+
+.life-and-style .explainer-panel h4:before,
+.life-and-style .explainer-feedback:after {
+  border-color: #f60;
+}
+
+.culture .explainer-panel h4:before,
+.culture .explainer-feedback:after {
+  border-color: #b74f7d;
+}
+
+.more .explainer-panel h4:before,
+.more .explainer-feedback:after {
+  border-color: #006666;
+}
+
+.explainer-feedback:after {
+  border-left-width: 0;
+  border-left-style: none;
+  border-top-width: 0;
+  border-top-style: none;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-right-style: solid;
+  left: inherit;
+  right: -15px;
+  top: inherit;
+  bottom: -17px;
+  z-index: 2;
+}
+
+.explainer-panel p {
+  font-size: 12px;
+  line-height: 1.35em;
+  padding-bottom: 1.1em;
+}
+
+
+.explainer-feedback {
+  color: #9E9E9E;
+  font-size: 11px;
+  text-align: right;
+  position: relative;
+}
+
+.explainer-feedback span {
+  margin-right: 5px;
+}
+
+.explainer-feedback label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  font-size: 13px;
+  width: 20px;
+  height: 20px;
+  text-indent: -9999px;
+  white-space: nowrap;
+  border-radius: 50%;
+  margin: 0;
+  line-height: inherit;
+  border: 2px solid #dedede;
+  position: relative;
+  text-align: center;
+  z-index: 3;
+}
+
+.explainer-feedback input[type=radio] {
+  display: none;
+}
+
+.explainer-feedback label:before {
+  content: "";
+  font-family: "FontAwesome";
+  color: #E0E0E0;
+  display: block;
+  margin-top: -2px;
+  text-indent: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.explainer-feedback label[for="feature-helpful"]:before {
+  content: "\f00c";
+}
+
+.explainer-feedback label[for="feature-not-helpful"]:before {
+  content: "\f00d";
+}
+
+#feature-helpful:checked + label {
+  border: 2px solid #66BB6A;
+}
+
+#feature-helpful:checked + label:before {
+  color: #66BB6A;
+}
+
+#feature-not-helpful:checked + label {
+  border: 2px solid #f44336;
+}
+
+#feature-not-helpful:checked + label:before {
+  color: #f44336;
+}
+
+@media all and (max-width: 979px) {
+  .explainer-panel {
+    width: 100%;
+    float: none;
+    padding:0 15px 15px 15px;
+    margin-bottom: 1.5em;
+  }
+
+  .explainer-feedback label {
+    width: 30px;
+    height: 30px;
+  }
+  .explainer-panel p{
+    font-size:13px;
+  }
+  .explainer-feedback label:before {
+    margin-top: 3px;
+  }
+
+ 
+}
+
+      

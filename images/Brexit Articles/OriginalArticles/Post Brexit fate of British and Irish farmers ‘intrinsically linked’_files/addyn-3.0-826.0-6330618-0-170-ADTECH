@@ -1,0 +1,11 @@
+document.write("<IFRAME SRC=\"https://ad.doubleclick.net/ddm/adi/N5457.151090IRISHTIMES.COM2/B10366750.138545802;sz=300x250;click=https%3A//secserv.adtech.de/adlink%7C826%7C6330618%7C0%7C170%7CAdId%3D16176634%3BBnId%3D3%3Bitime%3D914368884%3Blink%3D;ord=914368884;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?\" WIDTH=300 HEIGHT=250 MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR='#000000'>\n");
+document.write("<SCR"+"IPT language='JavaScript1.1' SRC=\"https://ad.doubleclick.net/ddm/adj/N5457.151090IRISHTIMES.COM2/B10366750.138545802;abr=!ie;sz=300x250;click=https%3A//secserv.adtech.de/adlink%7C826%7C6330618%7C0%7C170%7CAdId%3D16176634%3BBnId%3D3%3Bitime%3D914368884%3Blink%3D;ord=914368884;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?\">\n");
+document.write("</SCR"+"IPT>\n");
+document.write("<NOSCRIPT>\n");
+document.write("<A HREF=\"https://secserv.adtech.de/adlink|826|6330618|0|170|AdId=16176634;BnId=3;itime=914368884;nodecode=yes;link=https://ad.doubleclick.net/ddm/jump/N5457.151090IRISHTIMES.COM2/B10366750.138545802;abr=!ie4;abr=!ie5;sz=300x250;ord=914368884?\">\n");
+document.write("<IMG SRC=\"https://ad.doubleclick.net/ddm/ad/N5457.151090IRISHTIMES.COM2/B10366750.138545802;abr=!ie4;abr=!ie5;sz=300x250;ord=914368884;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?\" BORDER=0 WIDTH=300 HEIGHT=250 ALT=\"Advertisement\"></A>\n");
+document.write("</NOSCRIPT>\n");
+document.write("</IFRAME>\n");
+
+var adcount_6330618_1_=new Image();
+adcount_6330618_1_.src="https://secserv.adtech.de/adcount|2.0|826|6330618|0|170|AdId=16176634;BnId=3;ct=985508692;st=1928;adcid=1;itime=914368884;reqtype=5;;";

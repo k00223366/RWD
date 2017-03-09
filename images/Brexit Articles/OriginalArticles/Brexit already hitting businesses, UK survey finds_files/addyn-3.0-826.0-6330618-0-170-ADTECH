@@ -1,0 +1,49 @@
+window._ttf = window._ttf || [];
+_ttf.push({
+pid : 57905
+,lang : "en"
+,slot : '.advertisement'
+,format : "inread"
+,minSlot : 0
+,slotMode : "in"
+,mutable : false
+,callbacks : {
+skip : function() {
+var emptySlot = window.top.document.querySelectorAll('.advertisement')[0];
+emptySlot.style.display = "none"; }}
+,passBack:    function(num) {
+var iframe = window.top.document.createElement('iframe');
+iframe.width = 320;
+iframe.height = 270;
+iframe.border = 0;
+iframe.style.border = "0";
+iframe.frameBorder = 0;
+var content = "<html><head><style>body{margin:auto; padding:10px; border:0}<\/style><\/head>"
++ "<body><scr"+"ipt>"
++ "if (parent.window.adgroupid == undefined){"
++ " parent.window.adgroupid = Math.round(Math.random() * 1000);"
++ "}"
++ "document.write('<scr'+'ipt language=\"javascript1.1\" src=\"https://secserv.adtech.de/addyn|3.0|826.1|6310109|0|170|ADTECH;cookie=info;alias=;loc=100;target=_blank;grp='+parent.window.adgroupid+';misc='+new Date().getTime()+'\"><'+'/script>')"
++ "<\/script>"
++ "<\/body>"
++ "<\/html>";
+var _tt_passback_slot = window.top.document.querySelectorAll('.advertisement')[0];
+_tt_passback_slot.appendChild(iframe);
+iframe.contentWindow.document.open('text/html');
+iframe.contentWindow.document.write(content);
+iframe.contentWindow.document.close();
+}
+});
+(function (d){
+var js, s = d.getElementsByTagName('script')[0]; js = d.createElement('script'); js.async = true; js.src = '//cdn.teads.tv/media/format.js'; s.parentNode.insertBefore(js, s); }
+)(window.document);
+document.write("<noscript><a href=\"https://secserv.adtech.de/adlink|826|6330618|0|170|AdId=16809653;BnId=2;itime=914187826;kr16609=229;kp=679203;nodecode=yes;link=https://secserv.adtech.de/adlink|3.0|826.0|6310109|0|170|ADTECH;loc=300;alias=;cookie=info;\" target=\"_blank\" target=\"_blank\"><img src=\"https://secserv.adtech.de/adserv|3.0|826.0|6310109|0|170|ADTECH;loc=300;alias=;cookie=info;\" border=\"0\"></a></noscript>\n");
+document.write("<style>\n");
+document.write(".ad-inline-padding-fix\n");
+document.write("{ margin-bottom:0 !important; padding-bottom: 0 !important; padding-top: 0 !important; }\n");
+document.write(".ad-inline-name-fix\n");
+document.write("{ display:none!important; }\n");
+document.write("</style>\n");
+
+var adcount_6330618_1_=new Image();
+adcount_6330618_1_.src="https://secserv.adtech.de/adcount|2.0|826|6330618|0|170|AdId=16809653;BnId=2;ct=805088355;st=1829;adcid=1;itime=914187826;reqtype=5;;kr16609=229;kp=679203;";

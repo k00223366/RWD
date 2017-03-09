@@ -1,0 +1,360 @@
+var mppRestClient;
+var ITCOMMENTSCOOKIE = 'IT_comments';
+var ITUSERDATA = 'IT_pw_userdata';
+var oModal = false;
+var localMppCommentAuth;
+var mppCommentForms = {};
+var validateSettings = {
+//    onfocusout: true,
+    onkeyup: false,
+    onsubmit: true,
+//    focusCleanup: true,
+    errorPlacement: function(error, element) {
+        error.appendTo( element.closest('div') );
+    },
+    // highlight: function(element) {
+    //     jq(element).closest('.required').removeClass('valid').addClass('error');
+    // },
+    // success: function(element) {
+    //     jq(element).removeClass('error').hide();
+    // },
+    rules: {
+        // Sign In
+        signin_email: {
+            required: true,
+            email: true
+        },
+        signin_password: {
+            required: true
+        },
+        signin_terms: {
+            required: true
+        },
+        // Sign Up
+        signup_firstname: {
+            required: true
+        },
+        signup_surname: {
+            required: true
+        },				
+        signup_screenname: {
+            required: true,
+            minlength: 3,
+            maxlength: 20,
+            pattern: /^[a-zA-Z0-9.-]{3,20}$/
+        },			
+        signup_email: {
+        		required: true,
+            email: true
+        },
+        signup_confirmemail: {
+            required: true,
+            email: true,
+            equalTo: '#emailonce'
+        },
+        signup_password: {
+        		required: true,
+            minlength: 8
+        },
+        signup_confirmpassword: {
+            required: true,
+            minlength: 8,	
+            equalTo: '#passwordonce'
+        },
+        signup_terms: {
+            required: true
+        },
+        /*signup_guidelines: {
+            required: true
+        },*/
+        // Forgot PW	
+        forgotpw_email: {
+            required: true,
+            email: true
+        },
+        // Screen Name
+        screenname: {
+            required: true,
+            minlength: 3,
+            maxlength: 20,
+            pattern: /^[a-zA-Z0-9.-]{3,20}$/
+        }
+    },
+    messages : {
+        signup_confirmpassword : {
+            equalTo : 'Passwords don\'t match',
+        },
+        signup_confirmemail : {
+            equalTo : 'Emails don\'t match',
+        }
+    },
+    submitHandler : function (form) {
+        var f = jq(form), temp, data = [];
+        var ct = f.parents(':has(.content)');
+        ct.find('p.server-error-return').hide();
+        setButtonLoading(ct, true);
+        
+        temp = f.serializeArray();
+        for (var p in temp) {
+            data[ temp[p].name ] = temp[p].value;
+        }
+        switch (f.attr('id')) {
+            case 'fSignin' : {
+                mppRestClient.comments.login(data.signin_email, data.signin_password);
+                break;
+            }
+            case 'fSignup' : {
+                mppRestClient.comments.register({
+                    'firstname'       : data.signup_firstname, 
+                    'surname'         : data.signup_surname, 
+                    'screenname'      : data.signup_screenname, 
+                    'email'           : data.signup_email, 
+                    'confirmemail'    : data.signup_confirmemail, 
+                    'password'        : data.signup_password, 
+                    'confirmpassword' : data.signup_confirmpassword, 
+                    'terms'           : 'on',
+                    'receivemarketing': data.signup_guidelines
+                });
+                break;
+            }
+            case 'fForgotpw' : {
+                mppRestClient.comments.forgot(data.forgotpw_email);
+                break;
+            }
+            case 'fScreenname' : {
+                mppRestClient.comments.update(localMppCommentAuth, data.screenname);
+                break;
+            }
+        }
+    }
+};
+
+jq(document).ready(function() {
+    
+    if(jq("#comments").hasClass("it-comments--app")){
+        if(jq('html').hasClass("ios")) {
+            jq("#sign-in").attr("data-evt-label", "Button in comment modal - iOS app");
+        }else {
+            if (jq('html').hasClass("android")) {
+                jq("#sign-in").attr("data-evt-label", "Button in comment modal - Android app");
+            }
+        }
+    }
+    jq('.remodal form').each(function (v, k) {
+        var f = jq(this);
+        mppCommentForms[ jq(this).attr('id') ] = f.validate(validateSettings);
+    });
+    
+    jq(document).on('opening', '.remodal', function(e) {
+        var ct = jq(e.currentTarget);
+        var f = ct.find('form');
+        if (f.length) {
+            mppCommentForms[ f.attr('id') ].resetForm();
+            f[0].reset();
+        }
+        setButtonLoading(ct, false);
+    });
+    jq(document).on('closed', '.remodal', function(e) {
+        var ct = jq(e.currentTarget);
+        setButtonLoading(ct, false);
+        hideError(".server-error-return");
+        jq('.error-message').eq(0).removeClass('show-error-message');
+    });
+    
+    mppRestClient = jq.mppRestClient();
+    mppRestClient.setOptions({
+        proto    : 'https:',
+        host     : (location.host == "m.irishtimes.com" ? "www.irishtimes.com" : location.host),
+        endpoint : 'auth-rest-api/v1/',
+    });
+    mppRestClient.initModules();
+    
+    var vCookie = jq.cookie(ITCOMMENTSCOOKIE);
+            
+    if (null != vCookie && '' != vCookie) {
+        mppRestClient.comments.validate(vCookie);
+    }
+    
+    mppRestClient.onSuccess('comments', 'login', function (data) {
+        localMppCommentAuth = data.session_token;
+        setButtonLoading(jq('#fSignin'), false);
+        reModal('signin');
+        
+        if ("" == data.displayName) {
+            reModal('screenname', true);
+            jq('[data-remodal-id=screenname] h4 span').text(data.firstname + ' ' + data.surname);
+            jq('#screenNamePre').val(data.firstname + data.surname);
+        } else {
+            setLoggedinUser(data);
+        }
+    });
+    mppRestClient.onSuccess('comments', 'logout', function (data) {
+        jq('#vfScreenname').text('').hide();
+        jq('#lLogin').show();
+        jq('#lLogout').hide();
+    });
+    mppRestClient.onSuccess('comments', 'validate', function (data) {
+        setLoggedinUser(data);
+    });
+    mppRestClient.onSuccess('comments', 'forgot', function (data) {
+        reModal('forgotpwsent', true);
+    });
+    mppRestClient.onSuccess('comments', 'register', function (data) {
+        reModal('registered', true);
+    });
+    mppRestClient.onSuccess('comments', 'update', function (data) {
+        setLoggedinUser(data);
+        reModal();
+    });
+    
+    mppRestClient.onError('comments', 'login', function (errors) {
+        if(4 == errors.code){
+            jq('.error-message').eq(0).addClass('show-error-message');
+            setButtonLoading(jq('#fSignin'), false);
+        } else {
+        displayError('#fSignin', errors.message);
+        setButtonLoading(jq('#fSignin'), false);
+        }
+    });
+    mppRestClient.onError('comments', 'register', function (errors) {
+        displayError('#fSignup', errors.message);
+        setButtonLoading(jq('#fSignup'), false);
+        if (6 == errors.code) {
+            jq('#jmpForgotPassword').click(function () {
+                reModal('forgotpw', true);
+            });
+            jq('#jmpSignIn').click(function () {
+                reModal('signin', true);
+            });
+        }
+    });
+    mppRestClient.onError('comments', 'validate', function (errors) {
+        jq.cookie(ITCOMMENTSCOOKIE, '', {path : '/'});
+    });
+    mppRestClient.onError('comments', 'forgot', function (errors) {
+        displayError('#fForgotpw', errors.message);
+        setButtonLoading(jq('#fForgotpw'), false);
+    });
+    mppRestClient.onError('comments', 'update', function (errors) {
+        displayError('#fScreenname', errors.message);
+        setButtonLoading(jq('#fScreenname'), false);
+    });
+	
+    jq('#lLogout').click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        mppRestClient.comments.logout(jq.cookie(ITCOMMENTSCOOKIE));
+        jq.cookie(ITCOMMENTSCOOKIE, '', {path : '/'});
+        if (window.viafoura) {
+            window.viafoura.session.logout();
+        }
+        jq('#vfScreenname').off('click.vfcomments');
+    });
+    
+    jq('.close-error-message').click(function (e) {
+        jq('.error-message').eq(0).removeClass('show-error-message');
+    });
+	jq('.remodal form').submit(function(e) {
+		e.preventDefault();
+	});
+
+	jq("input[name='signup_firstname']").blur(function() {
+		jq(this).val(jq(this).val().replace(/\s+/g, ''));
+		defaultScreen();
+	});
+	jq("input[name='signup_surname']").blur(function() {
+		jq(this).val(jq(this).val().replace(/\s+/g, ''));
+		defaultScreen();
+	});
+	// Remove Spaces
+	jq("input[name='signup_screenname']").blur(function() {
+		jq(this).val(jq(this).val().replace(/\s+/g, ''));
+	});
+	jq("input[name='screenname']").blur(function() {
+		jq(this).val(jq(this).val().replace(/\s+/g, ''));
+	});
+    jq.validator.setDefaults({ 
+        ignore: []
+    });
+});
+
+// Unbind close by clicking overlay
+jq(document).ready(function () {
+    jq('.remodal-overlay').unbind('click.remodal');
+});
+
+// Auto fill username
+function defaultScreen() {
+	var firstName = jq("input[name='signup_firstname']").val();
+	var surname = jq("input[name='signup_surname']").val();	
+	jq("input[name='signup_screenname']").val(firstName + surname);
+}
+
+/**
+ * @param {String} id
+ * @param {Boolean} action
+ */
+function reModal(id, action)
+{
+    var id = ("undefined" != typeof arguments[0]) ? arguments[0] : false;
+    var action = ("undefined" != typeof arguments[1]) ? 'open' : 'close';
+    var extra = ("undefined" != typeof arguments[2]) ? arguments[2] : {};
+    if (id) {
+        oModal = id;
+    } else if (oModal) {
+        id = oModal;
+    }
+    if (id) {
+        var p = jq('[data-remodal-id=' +id+ ']');
+        var inst = jq.remodal.lookup[p.data('remodal')];
+        if (inst) {
+            inst[action]();
+        }
+    }
+}
+function setLoggedinUser(data)
+{
+    jq.cookie(ITCOMMENTSCOOKIE, data.session_token, {path : '/'});
+    jq.cookie(ITUSERDATA, data.uid, {path : '/'});
+    if (window.viafoura) {
+        window.viafoura.session.login.cookie(data.session_token);
+    }
+    jq('#vfScreenname').text(data.displayName).show().on('click.vfcomments', function () {
+        window.viafoura.ui.profile.show();
+    });
+    jq('#lLogin').hide();
+    jq('#lLogout').show();
+    reModal();
+}
+function displayError(sel, message)
+{
+    var p = jq(sel).parents(':has(.content)').find('p.server-error-return').eq(0);
+    p.html(message).show();
+    p.addClass('it-alert--error');
+   // jq('html, body').animate({scrollTop: 0}, 800);
+//    setTimeout(function () {
+//        p.text('').hide();
+//    }, 1600);
+}
+
+function hideError(sel){
+    var p = jq(sel).parents(':has(.content)').find('p.server-error-return').eq(0);
+    p.hide();
+    p.removeClass('it-alert--error');
+}
+function setButtonLoading(ct, state)
+{
+    var b = jq('button[data-loading-text]', ct).eq(0);
+    var dataText = b.data('loading-text');
+    
+    if (false == state && 'disabled' == b.attr('disabled')) {
+        b.data('loading-text', b.text());
+        b.removeClass('disabled').attr('disabled', false).text(dataText);
+        b.removeClass('disabled').removeAttr('disabled').text(dataText);
+    } else // disable
+    if (true == state && 'disabled' != b.attr('disabled')) {
+        b.data('loading-text', b.text());
+        b.addClass('disabled').attr('disabled', true).text(dataText);
+    }
+}

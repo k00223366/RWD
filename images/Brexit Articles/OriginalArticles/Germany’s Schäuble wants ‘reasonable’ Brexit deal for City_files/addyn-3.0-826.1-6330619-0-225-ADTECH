@@ -1,0 +1,12 @@
+document.write("<ins class='dcmads' style='display:inline-block;width:970px;height:250px'\n");
+document.write("    data-dcm-click-tracker='http://adserver.adtech.de/adlink|826|6330619|0|225|AdId=16842823;BnId=1;itime=914216160;nodecode=yes;link='\n");
+document.write("data-dcm-placement='N3402.273672.THEIRISHTIMES/B10862910.145028198'\n");
+document.write("    data-dcm-rendering-mode='iframe'\n");
+document.write("    data-dcm-https-only\n");
+document.write("    data-dcm-resettable-device-id=''\n");
+document.write("    data-dcm-app-id=''>\n");
+document.write("<scr"+"ipt src='https://www.googletagservices.com/dcm/dcmads.js'></scr"+"ipt>\n");
+document.write("</ins>\n");
+
+var adcount_6330619_1_=new Image();
+adcount_6330619_1_.src="http://adserver.adtech.de/adcount|2.0|826|6330619|0|225|AdId=16842823;BnId=1;ct=833453430;st=4070;adcid=1;itime=914216160;reqtype=5;;";

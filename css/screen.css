@@ -34,103 +34,148 @@ header a.logo {
 
 header a.logo span {display: none; }
 
+
 /*section - all*/
-section { padding: 0px; margin-top: 5px;}
+section { padding: 0px; margin-top: 5px;  }
 section::after { content:''; display: block; clear: both; }
 
 section.firstRank aside .top h3{color:#2996BA ; font-family: 'kepler-std-display'; font-weight:700; font-style:italic; margin-left: 0;}  
-section.firstRank aside .top {background-color: rgba(168,183,188, .1);}
 
-section.firstRank aside .top h3{color:#2996BA ; font-family: 'kepler-std-display'; font-weight:700; font-style:italic; }  
+/*lead story*/
+section.leadStory {margin-left: 10%; height: 400px; width: 800px;}
+section.leadStory aside.topPhoto { height: 100%; width: 95%; padding-top: 5px; }
+section.leadStory aside.topPhoto { margin-left: 10%;  background: no-repeat center center; background-image: url(../images/TheresaMay_EndaKenny.png); }
+section.leadStory aside{  width: 100%; float: left; }
+section.leadStory aside .top{ margin-left: 20%; padding-left: 5px; padding-right: 5px; padding-top: 5px;}
+section.leadStory aside .top h2 a {font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; }
+section.leadStory aside .top h2 a:hover {text-decoration:underline;} 
+section.leadStory aside .top h3{color:#2996BA ; font-family: 'kepler-std-display'; font-weight:700; font-style:italic; margin-left: 0px; }  
 
+/*agric*/
+section.agric {margin-left: 10%; height: 400px; width: 800px;}
+section.agric aside.topPhoto { height: 100%; width: 95%; padding-top: 5px;}
+section.agric aside.topPhoto .picture{ margin-left: 10%;  background: no-repeat center center; background-image: url(../images/irl-home-farm.jpg); height:100%; width:100%; background-size: contain; }
 
+/*economic*/
+
+section.economic {margin-left: 10%; height: 400px; width: 800px;}
+section.economic aside.topPhoto { height: 100%; width: 95%; padding-top: 5px;}
+section.economic aside.topPhoto .picture{ margin-left: 10%;  background: no-repeat center center; background-image: url(../images/IrelandFan.jpg); height:100%; width:100%; background-size: contain; }
+
+/*europe*/
+section.europe {margin-left: 10%; height: 400px; width: 800px;}
+section.europe aside.topPhoto { height: 100%; width: 95%; padding-top: 5px;}
+section.europe aside.topPhoto .picture{ margin-left: 10%;  background: no-repeat center center; background-image: url(../images/schauble.jpeg); height:100%; width:100%; background-size: contain; }
+
+/*britain*/
+section.britain {margin-left: 10%; height: 400px; width: 800px;}
+section.britain aside.topPhoto { height: 100%; width: 95%; padding-top: 5px;}
+section.britain aside.topPhoto .picture{ margin-left: 10%;  background: no-repeat center center; background-image: url(../images/EU-BrexitFlagImage.jpg); height:100%; width:100%; background-size: contain; }
+
+/*manufacture*/
+section.manu {margin-left: 10%; height: 400px; width: 800px;}
+section.manu aside.topPhoto { height: 100%; width: 95%; padding-top: 5px;}
+section.manu aside.topPhoto .picture{ margin-left: 10%;  background: no-repeat center center; background-image: url(../images/UK_EU%20jigsaw%20piece.jpg); height:100%; width:100%; background-size: contain; }
+
+/*search*/
+section.searchRank .topFiveSearch {width: 900px; margin-left: 10%; }
+
+section.searchRank h2 { margin-left: 30%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color: white;}
+section.searchRank .topFiveSearch /*p.first,p.second,p.third, p.fourth, p.fifth*/ { background-color: #2996BA; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color:white; }   
+}
+section.searchRank .topFiveSearch p.search {margin-left: 20%;}
+
+/*login*/
+section.login { margin-left: 40%;}
+section.login h2 { font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none;}
+section.login .loginButton { margin-left: -20%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; background-color: #2996BA; color:white; width:70%;}
+
+section.signUp {margin-left: 40%;}
+section.signUp h2 {font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none;}
+section.signUp .signUpDetails p { margin-left: -20%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; background-color: #2996BA; color:white; width: 70%;}
+
+/*story*/
+section.edit a { margin-left: 45%;'effra'; font-weight: 700; font-style: normal; text-decoration:none;}
+section.story h2{margin-left:40%; font-family: 'effra'; font-weight: 400; font-style: normal; /*text-decoration:none;*/}
+section.story .textBox { margin-left: 20%; width: 60%; height: 500px; background-color: #2996BA;}
 
 /*firstRank*/
+/*section.firstRank {background-color: rgba(168,183,188, .2);}*/
 section.firstRank aside{ width: 50%; float: left; }
 section.firstRank aside .top{ padding-left: 10px; padding-right: 5px;}
 
 section.firstRank aside .top h2 a {font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; }
 section.firstRank aside .top h2 a:hover {text-decoration:underline;} 
 
-section.firstRank aside .picture { background: no-repeat center center; background-image: url(../images/adobeVLargePMs.svg); height: 490px; width: 600px; }
-/*section.firstRank aside .picture { background-image: url(../images/SummitHeads_Ire.jpg); background-size: 200px 200px;  }*/
+section.firstRank aside.pic { height: 305px; width: 600px;}
+section.firstRank aside .picture { background: no-repeat center center; background-image: url(../images/TheresaMay_EndaKenny.png); height: 100%; width: 99%; }
+section.firstRank aside.pic .picture a.clickable {display: block; /*height: 490px; width: 600px;*/}
+section.firstRank aside.pic .picture a.clickable span {display: none;}
 
 
 /*secondRank first article*/
-section.secondRank aside .secondRk.firstArticle span { display: none; }
-
-section.secondRank {margin-top: 5px; margin-bottom: 30px; padding:0;}
+section.secondRank{background-color: rgba(168,183,188, .2);}
+section.secondRank {margin-top: 5px; margin-bottom: 0%; padding:0;}
 section.secondRank aside { width: 33%; float: left; text-align: left; }
 
-section.secondRank .secondRk { margin:0px; background: no-repeat center top; background-size: 300px 150px; padding-top: 155px;  }
-section.secondRank .secondRk.firstArticle { background-image: url(../images/IrelandFan.jpg);
-}
+section.secondRank .secondRk.firstArticle a.clickable { margin-top:1%; background: no-repeat center top; background-size: 70% 150px; padding-top: 155px; }
+section.secondRank .secondRk.firstArticle a.clickable {display:block; background-image: url(../images/IrelandFan.jpg);}
+section.secondRank .secondRk.firstArticle a.clickable span {display:none;}
 
 section.secondRank .secondRk.firstArticle p,h3{margin: 15px;}
-
 section.secondRank aside .secondRk.firstArticle p.title { font-family: 'effra'; font-weight: 600; }
 section.secondRank aside .secondRk.firstArticle p.title a { text-decoration: none; }
-
 section.secondRank aside .secondRk.firstArticle p.title a:hover {text-decoration:underline;} 
 section.secondRank aside .secondRk.firstArticle h3{ color:#2996BA ;font-family: 'kepler-std-display'; font-style: italic; }
 
+
 /*secondRank second article*/
-section.secondRank .secondRk.secondArticle { background-image: url(../images/UK_EU%20jigsaw%20piece.jpg);}
-section.secondRank aside .secondRk.secondArticle span { display: none; }
+section.secondRank .secondRk.secondArticle a.clickable { margin-top:1%; background: no-repeat center top; background-size: 70% 150px; padding-top: 155px; }
+section.secondRank .secondRk.secondArticle a.clickable { display: block; background-image: url(../images/EU-BrexitFlagImage.jpg);}
+section.secondRank aside .secondRk.secondArticle span { display:none; }
 
-section.secondRank {margin-top: 5px; margin-bottom: 30px; padding:0;}
+section.secondRank {margin-top: 5px; margin-bottom: 0px; padding:0;}
 section.secondRank aside { width: 33%; float: left; text-align: left; }
-
 section.secondRank .secondRk.secondArticle p,h3{margin: 15px;}
-
 section.secondRank aside .secondRk.secondArticle p.title { font-family: 'effra'; font-weight: 600; }
 section.secondRank aside .secondRk.secondArticle p.title a { text-decoration: none; }
-
 section.secondRank aside .secondRk.secondArticle p.title a:hover {text-decoration:underline;} 
 section.secondRank aside .secondRk.secondArticle h3{ color:#2996BA ;font-family: 'kepler-std-display'; font-style: italic; }
 
-
-
-
 /*thirdRank*/
-section.thirdRank {margin-top: 5px; margin-bottom: 30px; padding:0;}
-section.thirdRank aside { width: 33%; float: left; text-align: left; }
+section.thirdRank{background-color: rgba(168,183,188, .2);}
+section.thirdRank {margin-top: 5px; margin-bottom: 0%; padding:0;}
+section.thirdRank aside {width: 33%; float: left; text-align: left;}
 
-section.thirdRank aside{ width: 50%; float: left; }
+section.thirdRank .thirdRk.firstArticle a.clickable{ margin-top:1px; background: no-repeat center top; background-size: 70% 150px; padding-top: 155px; }
+
+section.thirdRank .thirdRk.firstArticle a.clickable{ display:block; background-image: url(../images/irl-home-farm.jpg); }
+section.thirdRank aside .thirdRk.firstArticle span { display: none; }
 section.thirdRank aside .top{ padding-left: 10px; padding-right: 5px;}
 
 section.thirdRank aside .top h2 a {font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; }
 section.thirdRank aside .top h2 a:hover {text-decoration:underline;} 
 
-/*section.thirdRank aside .picture img{ height: 475px; width: 600px; }*/
-
 /*thirdRank first article*/
-section.thirdRank aside .thirdRk.firstArticle span { display: none; }
-
-section.thirdRank {margin-top: 5px; margin-bottom: 30px; padding:0;}
-section.thirdRank aside { width: 33%; float: left; text-align: left; }
-
-section.thirdRank .thirdRk { margin:0px; background: no-repeat center top; background-size: 300px 150px; padding-top: 155px;  }
-section.thirdRank .thirdRk.firstArticle { background-image: url(../images/DanMullhallAmbassLondon.jpg);
-}
-
 section.thirdRank .thirdRk.firstArticle p,h3{margin: 15px;}
-
 section.thirdRank aside .thirdRk.firstArticle p.title { font-family: 'effra'; font-weight: 600; }
 section.thirdRank aside .thirdRk.firstArticle p.title a { text-decoration: none; }
-
 section.thirdRank aside .thirdRk.firstArticle p.title a:hover {text-decoration:underline;} 
 section.thirdRank aside .thirdRk.firstArticle h3{ color:#2996BA ;font-family: 'kepler-std-display'; font-style: italic; }
 
 /*thirdRank second article*/
+
+section.thirdRank .thirdRk.secondArticle a.clickable { margin-top:1%; background: no-repeat center top; background-size: 70% 150px; padding-top: 155px; }
+section.thirdRank .thirdRk.secondArticle a.clickable {display:block; background-image: url(../images/schauble.jpeg);}
+section.thirdRank .thirdRk.secondArticle a.clickable span {display:none;}
+
+
 section.thirdRank aside .thirdRk.secondArticle span { display: none; }
-
-section.thirdRank {margin-top: 5px; margin-bottom: 30px; padding:0;}
+section.thirdRank {margin-top: 5px; margin-bottom: 0px; padding:0;}
 section.thirdRank aside { width: 33%; float: left; text-align: left; }
-
-section.thirdRank .thirdRk { margin:0px; background: no-repeat center top; background-size: 300px 150px; padding-top: 155px;  }
-section.thirdRank .thirdRk.secondArticle { background-image: url(../images/schauble.jpeg);
-}
+/*section.thirdRank .thirdRk { margin:0px; background: no-repeat center top; background-size: 300px 150px; padding-top: 155px;  }*/
+/*section.thirdRank .thirdRk.secondArticle { background-image: url(../images/schauble.jpeg);
+}*/
 
 section.thirdRank .thirdRk.secondArticle p,h3{margin: 15px;}
 
@@ -141,42 +186,49 @@ section.thirdRank aside .thirdRk.secondArticle p.title a:hover {text-decoration:
 section.thirdRank aside .thirdRk.secondArticle h3{ color:#2996BA ;font-family: 'kepler-std-display'; font-style: italic; }
 
 /*thirdRank advert*/
-section.thirdRank .thirdRk.advert {
-    background: no-repeat center center;  
+section.thirdRank .thirdRk.advert { 
+    margin-left: 3%; margin-top: 1%; background: no-repeat center center;  
     background-image: url(../images/eventbriteSquareAdvert.svg); background-size: 400px 400px; padding-top: 300px;
 }
 
 /*secondRank advert*/ 
 section.secondRank .secondRk.advert {
-    background: no-repeat center center;  
+    margin-left: 3%; margin-top: 1%; background: no-repeat center center;  
     background-image: url(../images/eventbriteSquareAdvert.svg); background-size: 400px 400px; padding-top: 300px;
 }
 
 /*Top Banner*/
+
 section.topBanner {
-    margin-top: 5px; margin-bottom: 0px; background: no-repeat center top;  
-    background-image: url(../images/eventbriteTopBanner.svg); background-size:1000px 260px; padding-top: 200px; }
+    height: 150px; margin-bottom: 5px;/*background: rgb(241,90,36)*/;
+}
+section.topBanner  .topBanner{
+    
+    margin-top: 5px; margin-left: 0px; height: 150px;/*height: 100%;*/ background: url(../images/eventBriteTopAd_E.svg) no-repeat center top; background-size: cover; 
+    /*border: 2px solid darkblue; */
+    }
 
 /*Narrow Banner*/
 section.narrowBanner {
-    background: no-repeat center center;  
-    background-image: url(../images/narrowBanner.svg); background-size:1000px 151px;
-    padding-top: 151px;
+    height: 140px; background: url(../images/narrowBanner.svg)no-repeat center top; background-size: cover/*1000px 151px*/; position:relative;
+    /*padding-top: 151px;*/
 }
 
 /*navigation*/
 nav {
     
     background-color: rgba(0, 102, 153, 1) /*rgba(0,0,0, .3)*/;
-    position: absolute;
-    top: 260px; left: 0px;
-    padding: 50px 0 0 0;
-    width: 100%;
+    position: relative;
+    top: 152px; margin-left:240px;
+    padding: 10px 0 0 0;
+    width: 80%;
 }
 
 nav::after { content:''; display: block; clear: both; } /*<!--??-->*/
 nav ul { list-style: none; margin: 0; padding: 0px; }
-nav ul li:hover { background-color: #2b0306; } /*they go black on hover*/
+nav ul li:hover { background-color: #006699; } /*they go black on hover*/
+
+nav ul li:hover > ul {display:block;}
 
 nav ul li a {
     display: inline-block;
@@ -189,6 +241,9 @@ nav ul li a {
 
 nav ul li a:visited { color: #fff; }
 nav ul li a:hover { background-color: #2996BA; } /*change from red colour*/
+
+nav ul ul {position: absolute; top: 100%; background-color: #2996BA; display: none;}
+nav ul ul li { position: relative; }
 
 /*top level*/
 nav > ul { padding-left: 317px; } /*spaces between menu buttons*/
@@ -228,7 +283,7 @@ nav > ul > li { float: left; } /*push them across the header*/
 
 /*footer*/
 
-footer { font-size: .8em; margin: 40px; color: #999; }
+footer { font-size: .8em; margin: 5px; color: #999; }
 
 footer .content { display: inline; }
 
@@ -236,35 +291,66 @@ footer a { margin-left: 30px; color: #777; }
 footer a:visited { color: #777; }
 footer a:hover { color: #000; }
 
+@media screen and (max-width:1200px)
+{
+    section.firstRank aside .picture { height: 300px; width: 600px; }
+    nav { top: 152px; margin-left:5px;}
+    section.firstRank aside{margin-left: 20%;}
+    
+    nav ul li a {
+    /*padding: 10px 20px;*/
+    /*text-decoration: none;*/
+    width: 50%;
+    position: relative;
+    }
+    
+    /*second and third row adverts*/ 
+    section.secondRank .secondRk.advert { background-size: 300px 300px; padding-top: 300px;}
+    section.thirdRank .thirdRk.advert { background-size: 300px 300px; padding-top: 300px; }
+
+
+}
+
 @media screen and (max-width: 1000px ) {
     /* header */  
+    section.topBanner {height: 125px;}
     
-    section.topBanner { 
-    background-image: url(../images/eventbriteTopBanner.svg); background-size:1000px 160px; padding-top: 125px; }
+    /*section.topBanner .topBanner1000{ 
+    background-image: url(../images/eventBriteTopAd_E.svg) no-repeat center top; display: block; /*background-size:1000px 160px; padding-top: 125px; }*/
+    
     
     header { height: 100px; }
-    header a.logo { width: 100px; height: 90px; }
+    header a.logo { width: 100px; height: 80px; }
     
     h1 {font-size: 2.4em; }
     h2 {font-size: 1.8em; font-weight: 500; }
     
     /*top news story*/
+    section.firstRank aside.pic{margin-left: 14%;}
     section.firstRank aside .top p.third, p.fourth { display: none; }    
     section.firstRank aside .picture { height: 300px; width: 600px; }
-        
+    
+    section.leadStory {margin-left: 2%;}
+    section.leadStory .topPhoto.picture{margin-left: 2%;}
+    section.leadStory .topPhoto.picture{height: 300px; width: 600px;}    
+    
+    /*economic */
+    section.economic,section.agric, section.europe, section.britain, section.manufacture{margin-left: 12%; height: 300px; width: 600px;}
     /*navigation*/
-    nav { width: 60%; top: 140px; left: 60px;}
-    nav > ul { padding-left: 40px; } /*spaces between menu buttons*/
+    nav { margin-left: 13%; width: 80%; top: 51%; left: 30px;}
+    nav > ul { padding-left: 4%; } /*spaces between menu buttons*/
     /*nav > ul { float: left; } /*push them across the header*/
 
     nav > ul > li { float: left; } /*push them across the header*/
     
     nav ul li a {
-    padding: 8px 20px;
+    padding: 10px 20px;
     text-decoration: none;
-    width: 30px;
+    width: 70%;
     position: relative;
     }
+    
+    
     
     #search form input[type=search] {
     position: absolute; top: 190px; left: 400px;
@@ -273,7 +359,7 @@ footer a:hover { color: #000; }
     /*second rank*/
     section.secondRank aside .secondRk.firstArticle p.second { display:none; }
     section.secondRank aside .secondRk.secondArticle p.second { display:none; }
-    section.secondRank .secondRk { background-size: 240px 110px; padding-top: 115px; margin-left: 0px; }
+    section.secondRank .secondRk { background-size: 240px 110px; /*padding-top: 115px;*/ margin-left: 0px; }
     
     section.secondRank aside .secondRk.firstArticle p.title { font-family: 'effra'; font-weight: 300; font-style: normal; }
     section.secondRank aside .secondRk.secondArticle p.title { font-family: 'effra'; font-weight: 300; font-style: normal; }
@@ -281,14 +367,14 @@ footer a:hover { color: #000; }
     /*third rank*/
     section.thirdRank aside .thirdRk.firstArticle p.second { display:none; }
     section.thirdRank aside .thirdRk.secondArticle p.second { display:none; }
-    section.thirdRank .thirdRk { background-size: 240px 110px; padding-top: 115px; margin-left: 0px; }
+    section.thirdRank .thirdRk { background-size: 240px 110px;/*padding-top: 115px*/; margin-left: 0px; }
     
     section.thirdRank aside .thirdRk.firstArticle p.title { font-family: 'effra'; font-weight: 300; font-style: normal; }
     section.thirdRank aside .thirdRk.secondArticle p.title { font-family: 'effra'; font-weight: 300; font-style: normal; }
     
-    /*second rank square adverts*/
-    section.secondRank .secondRk.advert{ background-size: 300px 400px; margin-top: 0;  padding-top: 200px;}
-    section.thirdRank .thirdRk.advert { background-size: 300px 400px; padding-top: 200px; }
+    /*second and third row adverts*/ 
+    section.secondRank .secondRk.advert { background-size: 300px 300px; padding-top: 300px;}
+    section.thirdRank .thirdRk.advert { background-size: 300px 300px; padding-top: 300px; }
     
 }
     
@@ -299,37 +385,35 @@ footer a:hover { color: #000; }
     h3 { font-size: 1.1em; font-weight: 700; }
     
     
-    section.topBanner { margin-left: 0px; width: 80%; }
+    
+    section.topBanner { margin-left: 0px; width: 100%; height: 105px;}
     
     /*header*/
-    header { margin-left: 5px; height: 90px; }
-    header  {width: 80%; }
+    header { margin-left: 0px; height: 90px; }
+    header  {width: 100%; }
     
     /*main photo*/
-    section.firstRank aside.topStory {width: 80%;}
-    /*section.firstRank aside .top {width: 100%; background-color: aqua; }*/
+    section.firstRank aside.topStory {margin-left: 12%; width: 80%; }
+    section.firstRank aside.pic {margin-left: 13%;}
     
-    
-    section.firstRank aside .picture { width: 0%; height: 0%; }
-    section.firstRank aside.pic { width: 0%; height: 0%; }
-    section.firstRank aside .picture { display: none; height: 10px ; width: 10px; color: aqua; }
-    
-    
-    
-    section.mobile .picture { margin-left: 60px; background: no-repeat center top; background-image: url(../images/adobeVLargePMs.svg);  height: 300px; width: 400px;}
-    
+    section.leadStory {margin-left: 0%;}
     
     /*switch off the div for the ads allowing the stories to float right*/
     section.secondRank aside.sqAdd { width: 0%; height: 0%;}
-    section.secondRank aside  { width: 40%; }
+    
+    section.secondRank aside  {  margin-left: 5%; width: 40%; }
     /*section.secondRank .secondRk {background-image: 250px; 150px; }*/
     
-    section.secondRank .secondRk { margin:0px; background: no-repeat center top; background-size: 210px 145px; padding-top: 155px;  }
+    /*section.secondRank .secondRk.firstArticle {background-size: 1000px 100px;}*/
+    section.secondRank .secondRk.firstArticle a.clickable{margin-left: 1px; background-size: 200px 130px; /*padding-top: 155px;*/  }
+    section.secondRank .secondRk.secondArticle a.clickable{margin-left: 1px;background-size: 200px 130px; /*padding-top: 155px;*/  }
     
-    
-    section.thirdRank aside.sqAdd { width: 0%; height: 0%;}
+    /*section.thirdRank aside.sqAdd { width: 0%; height: 0%;}
     section.thirdRank aside  { width: 40%; }
-    section.thirdRank .thirdRk { margin:0px; background: no-repeat center top; background-size: 210px 145px; padding-top: 155px;  }
+    section.thirdRank .thirdRk { margin:0px; background: no-repeat center top; background-size: 190px 145px; /*padding-top: 155px; }*/
+    section.thirdRank aside  {  margin-left: 5%; width: 40%; }
+    section.thirdRank .thirdRk.firstArticle a.clickable{margin-left: 1px; background-size: 200px 130px; /*padding-top: 155px;*/  }
+    section.thirdRank .thirdRk.secondArticle a.clickable{margin-left: 1px;background-size: 200px 130px; /*padding-top: 155px;*/  }
     
     
     
@@ -338,24 +422,50 @@ footer a:hover { color: #000; }
     
     /*navigation*/
     nav { position:static; width: auto; padding: 20px 15px; background-color: #006699; }
+    nav {margin-left: 75px; top: 45%; width: 76%;}
     nav ul { padding-left: 20px; }
+    
+    nav { margin-left: 100px; width: 80%; top: 51%; left: 30px;}
+    nav > ul { padding-left: 6%; } 
+    nav ul ul {top: 60%;}
+    
+    /*nav ul,
+    nav ul ul,
+    nav ul ul ul { display: block; position: static; }*/
+    
+    nav > ul { padding: 0; }
+    nav > ul > li { float: none; margin-top: 25px; }
+    
+    
     
     /*square adverts*/
     section.secondRank .secondRk.advert{ display: none; }
     section.thirdRank .thirdRk.advert { display: none; }
     
     /*narrow banner*/
-    section.mobileBanner .banner { background: no-repeat center top; background-image: url(../images/narrowBanner.svg); width: 80%; padding-top: 110px;  }
+    section.mobileBanner .banner { background: no-repeat center top; background-image: url(../images/narrowBanner.svg);  width: 100%; height: 85px; background-size: cover;}
     
-    nav {margin-left: 5px;  width: 76%;}
+    
     
     /*&section.narrowBanner { position: relative; left: -140px; background: no-repeat center top;  background-image: url(../images/narrowBanner.svg);padding-top: 80px;  background-size: 120% 100px;  }*/
     
     
-     section.narrowBanner { margin-left: 5px; background: no-repeat center top; background-image: url(../images/narrowBanner.svg); width: 80%; padding-top: 110px;  }
+    section.narrowBanner { background: no-repeat center top; background-image: url(../images/narrowBanner.svg); height: 85px; width: 100%;  /*background-size: cover;*/}
     
     
+    @media screen and (max-width: 540px ) {
     
+    section.pic {height:300px; width:400px;}
+    section.pic aside.topPhoto { margin-left:2%; height: 100%; width: 100%;}
+    
+    section.firstRank {margin-left: 0px;}
+    section.firstRank aside.topStory { width:90%;} 
+    section.firstRank aside .top{ margin-left: 5%; /*padding-left: 5px; padding-right: 5px;*/}
+        
+    /*economic */
+    section.economic {margin-left: 1%; height: 300px; width: 600px;}    
+        
+    }
 }
     
         

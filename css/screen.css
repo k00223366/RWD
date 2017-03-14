@@ -17,7 +17,7 @@ p { margin: 0 0 1em 0; font-family: 'effra';}
 a { color: #242632/*#007eff;*/}
 a:visited {color: #242632;/*#65b1ff;*/}
 
-a.btn { font-size: 1.2em; text-decoration: none; color: #f1f9f9; border: 1px solid #fff; padding: 4px 15px; transition: background-color .5s; }
+a.btn { font-size: 1.6em; text-decoration: none; color: #006699; border: 1px solid #006699; padding: 4px 15px; transition: background-color .5s; }
 
 a.btn:hover {background-color: rgba(0,0,0,.3); }
 
@@ -78,26 +78,52 @@ section.manu aside.topPhoto { height: 100%; width: 95%; padding-top: 5px;}
 section.manu aside.topPhoto .picture{ margin-left: 10%;  background: no-repeat center center; background-image: url(../images/UK_EU%20jigsaw%20piece.jpg); height:100%; width:100%; background-size: contain; }
 
 /*search*/
-section.searchRank .topFiveSearch {width: 900px; margin-left: 10%; }
+section.searchRank .topFiveSearch {width: 900px; margin-left: 10%; padding-top: 30px; }
 
-section.searchRank h2 { margin-left: 30%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color: white;}
-section.searchRank .topFiveSearch /*p.first,p.second,p.third, p.fourth, p.fifth*/ { background-color: #2996BA; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color:white; }   
+section.searchRank h2 { margin-left: 20%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color: white;}
+section.searchRank h3 { margin-left: 20%; font-family: 'effra'; font-weight: 200; font-style: normal; text-decoration:none; color: white;}
+section.searchRank .topFiveSearch /*p.first,p.second,p.third, p.fourth, p.fifth*/ { background-color: #2996BA; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color:#006699; }   
+/*clickable search*/
+section.searchRank .topFiveSearch p.search {margin-left: 5%; background-color: #f1f9f9; width: 80%; height: 90px;}
+section.searchRank .topFiveSearch p img {float:right;}
+section.searchRank .topFiveSearch p.search a.clickable {display: block; height: 100%; width: 100%;}
+section.searchRank .topFiveSearch p.search a.clickable span {display: none;}
 
-section.searchRank .topFiveSearch p.search {margin-left: 20%;}
+/*sort*/
+section.sortRank .topFiveSearch {width: 900px; margin-left: 10%; padding-top: 30px; }
+
+section.sortRank h2 { margin-left: 35%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color: white;}
+section.sortRank h3 { margin-left: 30%; font-family: 'effra'; font-weight: 200; font-style: normal; text-decoration:none; color: white;}
+section.sortRank .topFiveSearch /*p.first,p.second,p.third, p.fourth, p.fifth*/ { background-color: #2996BA; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color:#006699; }   
+/*clickable search*/
+section.sortRank .topFiveSearch p.search {margin-left: 5%; background-color: #f1f9f9; width: 80%; height: 90px;}
+section.sortRank .topFiveSearch p img {float:right;}
+
+section.sortRank .topFiveSearch p.search a.clickable {display: block; height: 100%; width: 100%;}
+section.sortRank .topFiveSearch p.search a.clickable span {display: none;}
 
 /*login*/
 section.login { margin-left: 40%;}
-section.login h2 { font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none;}
+section.login h2 { margin-left:8%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color: #006699; }
 section.login .loginButton { margin-left: -20%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; background-color: #2996BA; color:white; width:70%;}
+/*profile*/
+section.profile { margin-left: 40%;}
+section.profile h2, .profile p{ margin-left:3%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color: #006699; }
 
+section.profile .loginButton { margin-left: -20%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; background-color: #2996BA; color:white; width:70%;}
+
+/*signup*/
 section.signUp {margin-left: 40%;}
-section.signUp h2 {font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none;}
+section.signUp h2 {margin-left: 6%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color: #006699;}
 section.signUp .signUpDetails p { margin-left: -20%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; background-color: #2996BA; color:white; width: 70%;}
 
 /*story*/
-section.edit a { margin-left: 45%; font-family: 'effra'; font-weight: 700; font-style: normal; text-decoration:none;}
-section.story h2{margin-left:40%; font-family: 'effra'; font-weight: 400; font-style: normal; /*text-decoration:none;*/}
-section.story .textBox { margin-left: 20%; width: 60%; height: 500px; background-color: #2996BA;}
+section.edit {position: relative;}
+section.edit .button{ height: 50px; width: 70%;}
+section.edit a { display:block; margin-left: 45%; font-family: 'effra'; font-weight: 700; font-style: normal; text-decoration:none; position:fixed; padding: 10px 20px 10px 20px ; margin-right: 50px; float:left;}
+section.story h2{margin-left:28%; font-family: 'effra'; font-weight: 400; font-style: normal; /*text-decoration:none;*/}
+section.story .textBox { margin-left: 20%; width: 60%; height: 500px; background-color: #f1f9f9; border: solid 1px #2996BA;}
+
 
 /*firstRank*/
 section.firstRank {background-color: rgba(168,183,188, .2);}
@@ -293,8 +319,12 @@ footer a:hover { color: #000; }
 
 @media screen and (max-width:1200px)
 {
-    section.firstRank aside .picture { height: 300px; width: 600px; }
-    nav { top: 152px; margin-left:5px;}
+    header {height: 150px;}
+    header a.logo {width:250px; height: 140px; top:9px;}
+    /*section.firstRank aside .picture { height: 300px; width: 600px; }*/
+    section.firstRank aside.pic {margin-left: 20%;}
+    section.firstRank aside.pic .picture { height: 300px; width: 600px; }
+    nav { top: 102px; margin-left:5px;}
     section.firstRank aside{margin-left: 20%;}
     
     nav ul li a {
@@ -314,7 +344,7 @@ footer a:hover { color: #000; }
     section.topBanner {height: 125px;}
     
     header { height: 100px; }
-    header a.logo { width: 100px; height: 80px; }
+    header a.logo { width: 170px; height: 90px; top: 6px;}
     
     h1 {font-size: 2.4em; }
     h2 {font-size: 1.8em; font-weight: 500; }
@@ -330,6 +360,14 @@ footer a:hover { color: #000; }
     
     /*economic */
     section.economic,section.agric, section.europe, section.britain, section.manufacture{margin-left: 12%; height: 300px; width: 600px;}
+    
+    /*search*/
+    section.searchRank .topFiveSearch {width: 800px; margin-left:1%; padding-top: 30px; }
+    /*sort*/
+    section.sortRank {margin-left: 1%;}
+    section.sortRank aside {margin-left: 1%; }
+    section.sortRank .topFiveSearch {width: 800px; margin-left:1%; padding-top: 30px; }
+    
     /*navigation*/
     nav { margin-left: 13%; width: 80%; top: 51%; left: 30px;}
     nav > ul { padding-left: 4%; } /*spaces between menu buttons*/
@@ -343,8 +381,6 @@ footer a:hover { color: #000; }
     width: 70%;
     position: relative;
     }
-    
-    
     
     #search form input[type=search] {
     position: absolute; top: 190px; left: 400px;
@@ -386,11 +422,60 @@ footer a:hover { color: #000; }
     header { margin-left: 0px; height: 90px; }
     header  {width: 100%; }
     
+    header a.logo {top: 0px;}
+    
     /*main photo*/
     section.firstRank aside.topStory {margin-left: 12%; width: 80%; }
     section.firstRank aside.pic {margin-left: 13%;}
     
-    section.leadStory {margin-left: 0%;}
+    /*lead*/
+    section.leadStory {margin-left: 5px; width: 500px; height: 300px;}
+    section.leadStory aside.topPhoto {margin-left: 5px;}
+    section.leadStory aside.topStory {margin-left:5px;}
+    section.leadStory aside.topPhoto .top {margin-left:5px;}
+    section.leadStory aside.topStory .top {margin-left:5px;}
+    
+    /*britainBrexitSurvey*/
+    section.britain {margin-left: 5px; width: 500px; height: 300px;}
+    section.britain aside.topPhoto {margin-left: 5px;}
+    section.britain aside.topStory {margin-left:5px;}
+    section.britain aside.topPhoto .picture {margin-left:5px; width: 60%;}
+    section.britain aside.topStory .top {margin-left:5px;}
+    
+    /*agric*/
+    section.agric {margin-left: 5px; width: 500px; height: 300px;}
+    section.agric aside.topPhoto {margin-left: 5px;}
+    section.agric aside.topStory {margin-left:5px;}
+    section.agric aside.topPhoto .picture {margin-left:5px;}
+    section.agric aside.topStory .top {margin-left:5px;}
+    /*economic*/
+    section.economic {margin-left: 5px; width: 500px; height: 300px;}
+    section.economic aside.topPhoto {margin-left: 5px;}
+    section.economic aside.topStory {margin-left:5px;}
+    section.economic aside.topPhoto .picture {margin-left:5px;}
+    section.economic aside.topStory .top {margin-left:5px;}
+    /*europe*/
+    section.europe {margin-left: 5px; width: 500px; height: 300px;}
+    section.europe aside.topPhoto {margin-left: 5px;}
+    section.europe aside.topStory {margin-left:5px;}
+    section.europe aside.topPhoto .picture {margin-left:5px;}
+    section.europe aside.topStory .top {margin-left:5px;}
+    /*manufacture*/
+    section.manu {margin-left: 5px; width: 500px; height: 300px;}
+    section.manu aside.topPhoto {margin-left: 5px;}
+    section.manu aside.topStory {margin-left:5px;}
+    section.manu aside.topPhoto .picture {margin-left:5px;}
+    section.manu aside.topStory .top {margin-left:5px;}
+    
+    /*search*/
+    section.searchRank .topFiveSearch {width: 600px; margin-left:1%; padding-top: 20px; }
+    section.searchRank .topFiveSearch p.search { height: 50px;}
+    section.searchRank .topFiveSearch p img {display:none;}
+    
+    /*sort*/
+    section.sortRank .topFiveSearch {width: 600px; margin-left:1%; padding-top: 20px; }
+    section.sortRank .topFiveSearch p.search { height: 50px;}
+    section.sortRank .topFiveSearch p img {display:none;}
     
     /*switch off the div for the ads allowing the stories to float right*/
     section.secondRank aside.sqAdd { width: 0%; height: 0%;}
@@ -417,7 +502,7 @@ footer a:hover { color: #000; }
     nav {margin-left: 75px; top: 45%; width: 76%;}
     nav ul { padding-left: 20px; }*/
     
-    nav { margin-left: 100px; width: 80%; top: 45%; left: 30px;}
+    nav { margin-left: 100px; width: 90%; top: 45%; left: 1px;}
     nav > ul { padding-left: 6%; } 
     nav ul ul {top: 100%;}
     /*nav ul,
@@ -434,26 +519,40 @@ footer a:hover { color: #000; }
     section.thirdRank .thirdRk.advert { display: none; }
     
     /*narrow banner*/
-    section.mobileBanner .banner { background: no-repeat center top; background-image: url(../images/narrowBanner.svg);  width: 100%; height: 85px; background-size: cover;}
+    section.mobileBanner .banner { background: no-repeat center top; background-image: url(../images/narrowBanner.svg);  width: 100%; height: 57px; background-size: cover;}
     
-    section.narrowBanner { background: no-repeat center top; background-image: url(../images/narrowBanner.svg); height: 85px; width: 100%;  /*background-size: cover;*/}
+    section.narrowBanner { background: no-repeat center top; background-image: url(../images/narrowBanner.svg); height: 57px; width: 100%; background-size: cover;}
 }
     
-    @media screen and (max-width: 540px ) {
+    @media screen and (max-width: 560px ) {
     
+    header a.logo {top:0px;}
+        
     section.pic {height:300px; width:400px;}
-    section.pic aside.topPhoto { margin-left:2%; height: 100%; width: 100%;}
+    section.pic aside.topPhoto { margin-left:5px; height: 100%; width: 100%;}
     
     section.firstRank {margin-left: 0px;}
-    section.firstRank aside.topStory { width:90%;} 
-    section.firstRank aside .top{ margin-left: 5%; /*padding-left: 5px; padding-right: 5px;*/}
+    section.firstRank aside.topStory { margin-left: 5px; width:90%;} 
+    section.firstRank aside.pic{ margin-left: 5px; /*padding-left: 5px; padding-right: 5px;*/}
         
     /*economic */
-    section.economic {margin-left: 1%; height: 300px; width: 600px;}    
+    section.economic {margin-left: 1%; height: 300px; width: 600px;}      
+   
+    /*search*/
+    section.searchRank .topFiveSearch {width: 100%; margin-left:0%; padding-top: 10px; }
+    section.searchRank .topFiveSearch p.search { height: 45px;}
+    /*section.searchRank .topFiveSearch p img {display:none;} */   
         
-    }
-
+    /*sort*/
+    section.sortRank .topFiveSearch {width: 100%; margin-left:0%; padding-top: 10px; }
+    section.sortRank .topFiveSearch p.search { height: 45px;}
     
+    section.narrowBanner {display:none;}
+    footer {height: 140px;}
+    /*navigation*/
+    nav { margin-left: 0px; top: 1530px; width:100%;}
+    /*nav {bottom:0px; position:fixed; margin-left:0; width:100%; height: 37px;}*/
+}//560px
         
    
    

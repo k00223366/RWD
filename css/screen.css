@@ -337,6 +337,8 @@ footer a:hover { color: #000; }
     /*second and third row adverts*/ 
     section.secondRank .secondRk.advert { background-size: 300px 300px; padding-top: 300px;}
     section.thirdRank .thirdRk.advert { background-size: 300px 300px; padding-top: 300px; }
+    
+    .row{display:none;}
 }
 
 @media screen and (max-width: 1000px ) {
@@ -406,6 +408,8 @@ footer a:hover { color: #000; }
     section.secondRank .secondRk.advert { background-size: 300px 300px; padding-top: 300px;}
     section.thirdRank .thirdRk.advert { background-size: 300px 300px; padding-top: 300px; }
     
+    .row{display:none;}
+    
 }
     
 @media screen and (max-width: 840px ) {
@@ -422,7 +426,7 @@ footer a:hover { color: #000; }
     header { margin-left: 0px; height: 90px; }
     header  {width: 100%; }
     
-    header a.logo {top: 0px;}
+    header a.logo {top: 2px; width: 150px;}
     
     /*main photo*/
     section.firstRank aside.topStory {margin-left: 12%; width: 80%; }
@@ -502,8 +506,8 @@ footer a:hover { color: #000; }
     nav {margin-left: 75px; top: 45%; width: 76%;}
     nav ul { padding-left: 20px; }*/
     
-    nav { margin-left: 100px; width: 90%; top: 45%; left: 1px;}
-    nav > ul { padding-left: 6%; } 
+    nav { margin-left: 155px; width: 90%; top: 45%; left: 1px;}
+    nav > ul { padding-left: 2%; } 
     nav ul ul {top: 100%;}
     /*nav ul,
     nav ul ul,
@@ -522,11 +526,15 @@ footer a:hover { color: #000; }
     section.mobileBanner .banner { background: no-repeat center top; background-image: url(../images/narrowBanner.svg);  width: 100%; height: 57px; background-size: cover;}
     
     section.narrowBanner { background: no-repeat center top; background-image: url(../images/narrowBanner.svg); height: 57px; width: 100%; background-size: cover;}
+    
+    .row{display:none;}
 }
     
     @media screen and (max-width: 560px ) {
     
     header a.logo {top:0px;}
+        
+    header nav {display: none;}
         
     section.pic {height:300px; width:400px;}
     section.pic aside.topPhoto { margin-left:5px; height: 100%; width: 100%;}
@@ -548,10 +556,16 @@ footer a:hover { color: #000; }
     section.sortRank .topFiveSearch p.search { height: 45px;}
     
     section.narrowBanner {display:none;}
-    footer {height: 140px;}
+    footer {height: 140px; padding-top: 60px;}
     /*navigation*/
-    nav { margin-left: 0px; top: 1530px; width:100%;}
-    /*nav {bottom:0px; position:fixed; margin-left:0; width:100%; height: 37px;}*/
+   
+    /*navigation*/
+    /*nav { margin-left: 0px; top: 1530px; width:100%;}*/
+        /*nav {left:0; position: absolute; bottom: 35px; margin-top: 40px; z-index: 999;}*/
+    
+    
+    .row { display:block; 0px; height: 50px; width: 100%; background-color:#006699; top: 10px; }
+    nav {margin-left: 0px; width:100%; bottom: -30px; }
 }//560px
         
    

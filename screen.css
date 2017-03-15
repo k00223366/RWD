@@ -1,0 +1,690 @@
+/*CSS Document for Brexit Website*/
+
+
+body { font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 300; color: #555; margin: 0; padding: 0; }
+
+#page { max-width: 1200px; margin: 0 auto; background-color: rgba(168,183,188, .2); position: relative; }
+
+/* Text */
+h1 { margin: 0 0 1em 0; font-size: 2.8em; font-weight: 700; }
+h2 { margin: 0 0 .5em 0; font-size: 2.4em; font-weight: 700; line-height: 1.1em; }
+h3 { margin: 0 0 .5em 0; font-size: 1.3em; font-weight: 700; }
+h4 { margin: 0 0 1.5em 0; font-size: 1em; font-weight: 700; }
+
+p { margin: 0 0 1em 0; font-family: 'effra';}
+
+
+a { color: #242632/*#007eff;*/}
+a:visited {color: #242632;/*#65b1ff;*/}
+
+a.btn { font-size: 1.6em; text-decoration: none; color: #006699; border: 1px solid #006699; padding: 4px 15px; transition: background-color .5s; }
+
+a.btn:hover {background-color: rgba(0,0,0,.3); }
+
+/* Header */
+header { height: 200px; background: #006699 ; position: relative; }
+
+header a.logo {
+    z-index: 1;
+    position: absolute;
+    display: block; width: 300px; height: 160px;
+    background: url(../images/breakingBrexitLogo.svg) no-repeat 0 0; background-size: contain; 
+    top: 15px; left: 20px;
+}
+
+header a.logo span {display: none; }
+
+
+/*section - all*/
+section { padding: 0px; margin-top: 5px;  }
+section::after { content:''; display: block; clear: both; }
+
+section.firstRank aside .top h3{color:#2996BA ; font-family: 'kepler-std-display'; font-weight:700; font-style:italic; margin-left: 0;}  
+
+/*lead story*/
+section.leadStory {margin-left: 10%; height: 400px; width: 800px;}
+section.leadStory aside.topPhoto { height: 100%; width: 95%; padding-top: 5px; }
+section.leadStory aside.topPhoto { margin-left: 10%;  background: no-repeat center center; background-image: url(../images/TheresaMay_EndaKenny.png); }
+section.leadStory aside{  width: 100%; float: left; }
+section.leadStory aside .top{ margin-left: 20%; padding-left: 5px; padding-right: 5px; padding-top: 5px;}
+section.leadStory aside .top h2 a {font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; }
+section.leadStory aside .top h2 a:hover {text-decoration:underline;} 
+section.leadStory aside .top h3{color:#2996BA ; font-family: 'kepler-std-display'; font-weight:700; font-style:italic; margin-left: 0px; }  
+
+/*agric*/
+section.agric {margin-left: 10%; height: 400px; width: 800px;}
+section.agric aside.topPhoto { height: 100%; width: 95%; padding-top: 5px;}
+section.agric aside.topPhoto .picture{ margin-left: 10%;  background: no-repeat center center; background-image: url(../images/irl-home-farm.jpg); height:100%; width:100%; background-size: contain; }
+
+/*economic*/
+
+section.economic {margin-left: 10%; height: 400px; width: 800px;}
+section.economic aside.topPhoto { height: 100%; width: 95%; padding-top: 5px;}
+section.economic aside.topPhoto .picture{ margin-left: 10%;  background: no-repeat center center; background-image: url(../images/IrelandFan.jpg); height:100%; width:100%; background-size: contain; }
+
+/*europe*/
+section.europe {margin-left: 10%; height: 400px; width: 800px;}
+section.europe aside.topPhoto { height: 100%; width: 95%; padding-top: 5px;}
+section.europe aside.topPhoto .picture{ margin-left: 10%;  background: no-repeat center center; background-image: url(../images/schauble.jpeg); height:100%; width:100%; background-size: contain; }
+
+/*britain*/
+section.britain {margin-left: 10%; height: 400px; width: 800px;}
+section.britain aside.topPhoto { height: 100%; width: 95%; padding-top: 5px;}
+section.britain aside.topPhoto /*.picture*/{ margin-left: 10%;  background: no-repeat center center; background-image: url(../images/EU-BrexitFlagImage.jpg); height:100%; width:100%; background-size: contain; }
+
+/*manufacture*/
+section.manu {margin-left: 10%; height: 400px; width: 800px;}
+section.manu aside.topPhoto { height: 100%; width: 95%; padding-top: 5px;}
+section.manu aside.topPhoto .picture{ margin-left: 10%;  background: no-repeat center center; background-image: url(../images/UK_EU%20jigsaw%20piece.jpg); height:100%; width:100%; background-size: contain; }
+
+/*search*/
+section.searchRank .topFiveSearch {width: 900px; margin-left: 10%; padding-top: 30px; }
+
+section.searchRank h2 { margin-left: 20%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color: white;}
+section.searchRank h3 { margin-left: 20%; font-family: 'effra'; font-weight: 200; font-style: normal; text-decoration:none; color: white;}
+section.searchRank .topFiveSearch /*p.first,p.second,p.third, p.fourth, p.fifth*/ { background-color: #2996BA; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color:#006699; }   
+/*clickable search*/
+section.searchRank .topFiveSearch p.search {margin-left: 5%; background-color: #f1f9f9; width: 80%; height: 90px;}
+section.searchRank .topFiveSearch p img {float:right;}
+section.searchRank .topFiveSearch p.search a.clickable {display: block; height: 100%; width: 100%;}
+section.searchRank .topFiveSearch p.search a.clickable span {display: none;}
+
+/*sort*/
+section.sortRank .topFiveSearch {width: 900px; margin-left: 10%; padding-top: 30px; }
+
+section.sortRank h2 { margin-left: 35%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color: white;}
+section.sortRank h3 { margin-left: 30%; font-family: 'effra'; font-weight: 200; font-style: normal; text-decoration:none; color: white;}
+section.sortRank .topFiveSearch /*p.first,p.second,p.third, p.fourth, p.fifth*/ { background-color: #2996BA; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color:#006699; }   
+/*clickable search*/
+section.sortRank .topFiveSearch p.search {margin-left: 5%; background-color: #f1f9f9; width: 80%; height: 90px;}
+section.sortRank .topFiveSearch p img {float:right;}
+
+section.sortRank .topFiveSearch p.search a.clickable {display: block; height: 100%; width: 100%;}
+section.sortRank .topFiveSearch p.search a.clickable span {display: none;}
+
+/*login*/
+section.login { margin-left: 40%;}
+section.login h2 { margin-left:8%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color: #006699; }
+section.login .loginButton { margin-left: -20%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; background-color: #2996BA; color:white; width:70%;}
+/*profile*/
+section.profile { margin-left: 40%;}
+section.profile h2, .profile p{ margin-left:3%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color: #006699; }
+
+section.profile .loginButton { margin-left: -20%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; background-color: #2996BA; color:white; width:70%;}
+
+/*signup*/
+section.signUp {margin-left: 40%;}
+section.signUp h2 {margin-left: 6%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color: #006699;}
+section.signUp .signUpDetails p { margin-left: -20%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; background-color: #2996BA; color:white; width: 70%;}
+
+/*story*/
+section.edit {position: relative;}
+section.edit .button{ height: 50px; width: 70%;}
+section.edit a { display:block; margin-left: 45%; font-family: 'effra'; font-weight: 700; font-style: normal; text-decoration:none; position:fixed; padding: 10px 20px 10px 20px ; margin-right: 50px; float:left;}
+section.story h2{margin-left:28%; font-family: 'effra'; font-weight: 400; font-style: normal; /*text-decoration:none;*/}
+section.story .textBox { margin-left: 20%; width: 60%; height: 500px; background-color: #f1f9f9; border: solid 1px #2996BA;}
+
+
+/*firstRank*/
+section.firstRank {background-color: rgba(168,183,188, .2);}
+section.firstRank aside{ width: 50%; float: left; }
+section.firstRank aside .top{ padding-left: 10px; padding-right: 5px;}
+
+section.firstRank aside .top h2 a {font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; }
+section.firstRank aside .top h2 a:hover {text-decoration:underline;} 
+
+section.firstRank aside.pic { height: 305px; width: 600px;}
+section.firstRank aside .picture { background: no-repeat center center; background-image: url(../images/TheresaMay_EndaKenny.png); /*height: 100%; width: 99%; padding-top: 30%;*/}
+section.firstRank aside.pic .picture a.clickable {display: block; height: 490px; width: 600px;}
+section.firstRank aside.pic .picture a.clickable span {display: none;}
+
+
+/*secondRank first article*/
+section.secondRank{background-color: rgba(168,183,188, .2);}
+section.secondRank {margin-top: 5px; margin-bottom: 0%; padding:0;}
+section.secondRank aside { width: 33%; float: left; text-align: left; }
+
+section.secondRank .secondRk.firstArticle a.clickable { margin-top:1%; background: no-repeat center top; background-size: 70% 150px; padding-top: 155px; }
+section.secondRank .secondRk.firstArticle a.clickable {display:block; background-image: url(../images/IrelandFan.jpg);}
+section.secondRank .secondRk.firstArticle a.clickable span {display:none;}
+
+section.secondRank .secondRk.firstArticle p,h3{margin: 15px;}
+section.secondRank aside .secondRk.firstArticle p.title { font-family: 'effra'; font-weight: 600; }
+section.secondRank aside .secondRk.firstArticle p.title a { text-decoration: none; }
+section.secondRank aside .secondRk.firstArticle p.title a:hover {text-decoration:underline;} 
+section.secondRank aside .secondRk.firstArticle h3{ color:#2996BA ;font-family: 'kepler-std-display'; font-style: italic; }
+
+
+/*secondRank second article*/
+section.secondRank .secondRk.secondArticle a.clickable { margin-top:1%; background: no-repeat center top; background-size: 70% 150px; padding-top: 155px; }
+section.secondRank .secondRk.secondArticle a.clickable { display: block; background-image: url(../images/EU-BrexitFlagImage.jpg);}
+section.secondRank aside .secondRk.secondArticle span { display:none; }
+
+section.secondRank {margin-top: 5px; margin-bottom: 0px; padding:0;}
+section.secondRank aside { width: 33%; float: left; text-align: left; }
+section.secondRank .secondRk.secondArticle p,h3{margin: 15px;}
+section.secondRank aside .secondRk.secondArticle p.title { font-family: 'effra'; font-weight: 600; }
+section.secondRank aside .secondRk.secondArticle p.title a { text-decoration: none; }
+section.secondRank aside .secondRk.secondArticle p.title a:hover {text-decoration:underline;} 
+section.secondRank aside .secondRk.secondArticle h3{ color:#2996BA ;font-family: 'kepler-std-display'; font-style: italic; }
+
+/*thirdRank*/
+section.thirdRank{background-color: rgba(168,183,188, .2);}
+section.thirdRank {margin-top: 5px; margin-bottom: 0%; padding:0;}
+section.thirdRank aside {width: 33%; float: left; text-align: left;}
+
+section.thirdRank .thirdRk.firstArticle a.clickable{ margin-top:1px; background: no-repeat center top; background-size: 70% 150px; padding-top: 155px; }
+
+section.thirdRank .thirdRk.firstArticle a.clickable{ display:block; background-image: url(../images/irl-home-farm.jpg); }
+section.thirdRank aside .thirdRk.firstArticle span { display: none; }
+section.thirdRank aside .top{ padding-left: 10px; padding-right: 5px;}
+
+section.thirdRank aside .top h2 a {font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; }
+section.thirdRank aside .top h2 a:hover {text-decoration:underline;} 
+
+/*thirdRank first article*/
+section.thirdRank .thirdRk.firstArticle p,h3{margin: 15px;}
+section.thirdRank aside .thirdRk.firstArticle p.title { font-family: 'effra'; font-weight: 600; }
+section.thirdRank aside .thirdRk.firstArticle p.title a { text-decoration: none; }
+section.thirdRank aside .thirdRk.firstArticle p.title a:hover {text-decoration:underline;} 
+section.thirdRank aside .thirdRk.firstArticle h3{ color:#2996BA ;font-family: 'kepler-std-display'; font-style: italic; }
+
+/*thirdRank second article*/
+
+section.thirdRank .thirdRk.secondArticle a.clickable { margin-top:1%; background: no-repeat center top; background-size: 70% 150px; padding-top: 155px; }
+section.thirdRank .thirdRk.secondArticle a.clickable {display:block; background-image: url(../images/schauble.jpeg);}
+section.thirdRank .thirdRk.secondArticle a.clickable span {display:none;}
+
+
+section.thirdRank aside .thirdRk.secondArticle span { display: none; }
+section.thirdRank {margin-top: 5px; margin-bottom: 0px; padding:0;}
+section.thirdRank aside { width: 33%; float: left; text-align: left; }
+/*section.thirdRank .thirdRk { margin:0px; background: no-repeat center top; background-size: 300px 150px; padding-top: 155px;  }*/
+/*section.thirdRank .thirdRk.secondArticle { background-image: url(../images/schauble.jpeg);
+}*/
+
+section.thirdRank .thirdRk.secondArticle p,h3{margin: 15px;}
+
+section.thirdRank aside .thirdRk.secondArticle p.title { font-family: 'effra'; font-weight: 600; }
+section.thirdRank aside .thirdRk.secondArticle p.title a { text-decoration: none; }
+
+section.thirdRank aside .thirdRk.secondArticle p.title a:hover {text-decoration:underline;} 
+section.thirdRank aside .thirdRk.secondArticle h3{ color:#2996BA ;font-family: 'kepler-std-display'; font-style: italic; }
+
+/*thirdRank advert*/
+section.thirdRank .thirdRk.advert { 
+    margin-left: 3%; margin-top: 1%; background: no-repeat center center;  
+    background-image: url(../images/eventbriteSquareAdvert.svg); background-size: 400px 400px; padding-top: 300px;
+}
+
+/*secondRank advert*/ 
+section.secondRank .secondRk.advert {
+    margin-left: 3%; margin-top: 1%; background: no-repeat center center;  
+    background-image: url(../images/eventbriteSquareAdvert.svg); background-size: 400px 400px; padding-top: 300px;
+}
+
+/*Top Banner*/
+
+section.topBanner {
+    height: 150px; margin-bottom: 5px;/*background: rgb(241,90,36)*/;
+}
+section.topBanner  .topBanner{
+    
+    margin-top: 5px; margin-left: 0px; height: 150px;/*height: 100%;*/ background: url(../images/eventBriteTopAd_E.svg) no-repeat center top; background-size: cover; 
+    /*border: 2px solid darkblue; */
+    }
+
+/*Narrow Banner*/
+section.narrowBanner {
+    height: 140px; background: url(../images/narrowBanner.svg)no-repeat center top; background-size: cover/*1000px 151px*/; position:relative;
+    /*padding-top: 151px;*/
+}
+
+/*submit/edit page buttons*/
+section.edit .button {
+    z-index: 1;
+    background-color: rgba(0, 102, 153, 1);
+    position:relative;
+    top: 2px; margin-left: 240px;
+    padding: 10px 0 0 0;
+    width: 60%;
+}
+
+section.edit .button ul { list-style: none; margin: 0; padding: 0px; }
+section.edit .button ul li:hover { background-color: #006699; } 
+section.edit .button ul li a {
+    display:inline-block;
+    color: #f1f9f9;
+    padding: 8px 20px;
+    text-decoration: none;
+    width: 80px;
+    position: relative;
+}
+
+section.edit .button > ul { padding-left: 50px; } /*spaces between menu buttons*/
+section.edit .button > ul > li { float: left; } /*push them across the header*/
+
+/*navigation*/
+nav {
+    
+    background-color: rgba(0, 102, 153, 1) /*rgba(0,0,0, .3)*/;
+    position: relative;
+    top: 152px; margin-left:240px;
+    padding: 10px 0 0 0;
+    width: 80%;
+}
+
+nav::after { content:''; display: block; clear: both; } /*<!--??-->*/
+nav ul { list-style: none; margin: 0; padding: 0px; }
+nav ul li:hover { background-color: #006699; } /*they go black on hover*/
+
+nav ul li:hover > ul {display:block;}
+
+nav ul li a {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    width: 80px;
+    position: relative;
+}
+
+nav ul li a:visited { color: #fff; }
+nav ul li a:hover { background-color: #2996BA; } /*change from red colour*/
+
+nav ul ul {position: absolute; top: 100%; background-color: #2996BA; display: none;}
+nav ul ul li { position: relative; }
+
+/*top level*/
+nav > ul { padding-left: 317px; } /*spaces between menu buttons*/
+nav > ul > li { float: left; } /*push them across the header*/
+
+/*search*/
+
+/*#search {
+    background-color: deeppink;
+    max-width: 50%;
+    float:right; 
+}*/
+
+#search input {
+    background-color: white;
+    height: 26px;
+    border: 2px solid #B09C04;
+    max-width: 70%;
+}
+
+#search form input[type=search] {
+    background-color: white;
+    position: absolute;
+    top: 315px; left: 1000px;
+    height: 28px;
+    border: 2px solid #2996BA;
+    max-width: 70%;
+}
+
+/*#search form  {
+    position: absolute;
+    top: 370px; left: 500px;
+    height: 30px;
+    background-color: white;
+    
+}*/
+
+/*footer*/
+
+footer { font-size: .8em; margin: 5px; color: #999; }
+
+footer .content { display: inline; }
+
+/*footer a { margin-left: 30px; color: #777; }
+footer a:visited { color: #777; }
+footer a:hover { color: #000; }*/
+
+
+@media screen and (max-width: 2500px ) {
+    .row{display:none;}
+}
+
+@media screen and (max-width:1200px)
+{
+    header {height: 150px;}
+    header a.logo {width:250px; height: 140px; top:9px;}
+    /*section.firstRank aside .picture { height: 300px; width: 600px; }*/
+    section.firstRank aside.pic {margin-left: 20%;}
+    section.firstRank aside.pic .picture { height: 300px; width: 600px; }
+    nav { top: 102px; margin-left:5px;}
+    section.firstRank aside{margin-left: 20%;}
+    
+    nav ul li a {
+    /*padding: 10px 20px;*/
+    /*text-decoration: none;*/
+    width: 50%;
+    position: relative;
+    }
+    
+    /*second and third row adverts*/ 
+    section.secondRank .secondRk.advert { background-size: 300px 300px; padding-top: 300px;}
+    section.thirdRank .thirdRk.advert { background-size: 300px 300px; padding-top: 300px; }
+    
+    .row{display:none;}
+}
+    
+@media screen and (max-width: 1000px ) {
+    /* header */  
+    section.topBanner {height: 125px;}
+    
+    header { height: 100px; }
+    header a.logo { width: 170px; height: 90px; top: 6px;}
+    
+    h1 {font-size: 2.4em; }
+    h2 {font-size: 1.8em; font-weight: 500; }
+    
+    /*top news story*/
+    section.firstRank aside.pic{margin-left: 14%;}
+    section.firstRank aside .top p.third, p.fourth { display: none; }    
+    section.firstRank aside .picture { height: 300px; width: 600px; }
+    
+    section.leadStory {margin-left: 2%;}
+    section.leadStory .topPhoto.picture{margin-left: 2%;}
+    section.leadStory .topPhoto.picture{height: 300px; width: 600px;}    
+    
+    /*economic */
+    section.economic,section.agric, section.europe, section.britain, section.manufacture{margin-left: 12%; height: 300px; width: 600px;}
+    
+    /*search*/
+    section.searchRank .topFiveSearch {width: 800px; margin-left:1%; padding-top: 30px; }
+    /*sort*/
+    section.sortRank {margin-left: 1%;}
+    section.sortRank aside {margin-left: 1%; }
+    section.sortRank .topFiveSearch {width: 800px; margin-left:1%; padding-top: 30px; }
+    
+    /*navigation*/
+    nav { margin-left: 13%; width: 80%; top: 51%; left: 30px;}
+    nav > ul { padding-left: 4%; } /*spaces between menu buttons*/
+    /*nav > ul { float: left; } /*push them across the header*/
+
+    nav > ul > li { float: left; } /*push them across the header*/
+    
+    nav ul li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    width: 70%;
+    position: relative;
+    }
+    
+    #search form input[type=search] {
+    position: absolute; top: 190px; left: 400px;
+    }
+    
+    /*second rank*/
+    section.secondRank aside .secondRk.firstArticle p.second { display:none; }
+    section.secondRank aside .secondRk.secondArticle p.second { display:none; }
+    section.secondRank .secondRk { background-size: 240px 110px; /*padding-top: 115px;*/ margin-left: 0px; }
+    
+    section.secondRank aside .secondRk.firstArticle p.title { font-family: 'effra'; font-weight: 300; font-style: normal; }
+    section.secondRank aside .secondRk.secondArticle p.title { font-family: 'effra'; font-weight: 300; font-style: normal; }
+    
+    /*third rank*/
+    section.thirdRank aside .thirdRk.firstArticle p.second { display:none; }
+    section.thirdRank aside .thirdRk.secondArticle p.second { display:none; }
+    section.thirdRank .thirdRk { background-size: 240px 110px;/*padding-top: 115px*/; margin-left: 0px; }
+    
+    section.thirdRank aside .thirdRk.firstArticle p.title { font-family: 'effra'; font-weight: 300; font-style: normal; }
+    section.thirdRank aside .thirdRk.secondArticle p.title { font-family: 'effra'; font-weight: 300; font-style: normal; }
+    
+    /*second and third row adverts*/ 
+    section.secondRank .secondRk.advert { background-size: 300px 300px; padding-top: 300px;}
+    section.thirdRank .thirdRk.advert { background-size: 300px 300px; padding-top: 300px; }
+    
+    .row{display:none;}
+    
+}
+    
+@media screen and (max-width: 840px ) {
+    
+    h1 { font-size: 1.8em;}
+    h2 { font-size: 1.4em;}
+    h3 { font-size: 1.1em; font-weight: 700; }
+    
+    
+    
+    section.topBanner { margin-left: 0px; width: 100%; height: 105px;}
+    
+    /*header*/
+    header { margin-left: 0px; height: 90px; }
+    header  {width: 100%; }
+    
+    header a.logo {top: 2px; width: 150px;}
+    
+    /*main photo*/
+    section.firstRank aside.topStory {margin-left: 12%; width: 80%; }
+    section.firstRank aside.pic {margin-left: 13%;}
+    
+    /*lead*/
+    section.leadStory {margin-left: 5px; width: 500px; height: 300px;}
+    section.leadStory aside.topPhoto {margin-left: 5px;}
+    section.leadStory aside.topStory {margin-left:5px;}
+    section.leadStory aside.topPhoto .top {margin-left:5px;}
+    section.leadStory aside.topStory .top {margin-left:5px;}
+    
+    /*britainBrexitSurvey*/
+    section.britain {margin-left: 5px; width: 500px; height: 300px;}
+    section.britain aside.topPhoto {margin-left: 5px;}
+    section.britain aside.topStory {margin-left:5px;}
+    section.britain aside.topPhoto .picture {margin-left:5px; width: 60%;}
+    section.britain aside.topStory .top {margin-left:5px;}
+    
+    /*agric*/
+    section.agric {margin-left: 5px; width: 500px; height: 300px;}
+    section.agric aside.topPhoto {margin-left: 5px;}
+    section.agric aside.topStory {margin-left:5px;}
+    section.agric aside.topPhoto .picture {margin-left:5px;}
+    section.agric aside.topStory .top {margin-left:5px;}
+    /*economic*/
+    section.economic {margin-left: 5px; width: 500px; height: 300px;}
+    section.economic aside.topPhoto {margin-left: 5px;}
+    section.economic aside.topStory {margin-left:5px;}
+    section.economic aside.topPhoto .picture {margin-left:5px;}
+    section.economic aside.topStory .top {margin-left:5px;}
+    /*europe*/
+    section.europe {margin-left: 5px; width: 500px; height: 300px;}
+    section.europe aside.topPhoto {margin-left: 5px;}
+    section.europe aside.topStory {margin-left:5px;}
+    section.europe aside.topPhoto .picture {margin-left:5px;}
+    section.europe aside.topStory .top {margin-left:5px;}
+    /*manufacture*/
+    section.manu {margin-left: 5px; width: 500px; height: 300px;}
+    section.manu aside.topPhoto {margin-left: 5px;}
+    section.manu aside.topStory {margin-left:5px;}
+    section.manu aside.topPhoto .picture {margin-left:5px;}
+    section.manu aside.topStory .top {margin-left:5px;}
+    
+    /*search*/
+    section.searchRank .topFiveSearch {width: 600px; margin-left:1%; padding-top: 20px; }
+    section.searchRank .topFiveSearch p.search { height: 50px;}
+    section.searchRank .topFiveSearch p img {display:none;}
+    
+    /*sort*/
+    section.sortRank .topFiveSearch {width: 600px; margin-left:1%; padding-top: 20px; }
+    section.sortRank .topFiveSearch p.search { height: 50px;}
+    section.sortRank .topFiveSearch p img {display:none;}
+    
+    /*switch off the div for the ads allowing the stories to float right*/
+    section.secondRank aside.sqAdd { width: 0%; height: 0%;}
+    
+    section.secondRank aside  {  margin-left: 5%; width: 40%; }
+    /*section.secondRank .secondRk {background-image: 250px; 150px; }*/
+    
+    /*section.secondRank .secondRk.firstArticle {background-size: 1000px 100px;}*/
+    section.secondRank .secondRk.firstArticle a.clickable{margin-left: 1px; background-size: 200px 130px; /*padding-top: 155px;*/  }
+    section.secondRank .secondRk.secondArticle a.clickable{margin-left: 1px;background-size: 200px 130px; /*padding-top: 155px;*/  }
+    
+    /*section.thirdRank aside.sqAdd { width: 0%; height: 0%;}
+    section.thirdRank aside  { width: 40%; }
+    section.thirdRank .thirdRk { margin:0px; background: no-repeat center top; background-size: 190px 145px; /*padding-top: 155px; }*/
+    section.thirdRank aside  {  margin-left: 5%; width: 40%; }
+    section.thirdRank .thirdRk.firstArticle a.clickable{margin-left: 1px; background-size: 200px 130px; /*padding-top: 155px;*/  }
+    section.thirdRank .thirdRk.secondArticle a.clickable{margin-left: 1px;background-size: 200px 130px; /*padding-top: 155px;*/  }
+    
+    /*search box*/
+    #search form input[type=search] { position: relative; top: -48px; left:400px ; }
+    
+    /*navigation*/
+    /*nav { position:static; width: auto; padding: 20px 15px; background-color: #006699; }
+    nav {margin-left: 75px; top: 45%; width: 76%;}
+    nav ul { padding-left: 20px; }*/
+    
+    nav { margin-left: 155px; width: 90%; top: 45%; left: 1px;}
+    nav > ul { padding-left: 2%; } 
+    nav ul ul {top: 100%;}
+    /*nav ul,
+    nav ul ul,
+    nav ul ul ul { display: block; position: static; }*/
+    
+    nav > ul { padding: 0; }
+    /*nav > ul > li { float: none; margin-top: 25px; }*/
+    
+    nav > ul > li { float: left; } /*push them across the header*/
+    
+    /*square adverts*/
+    section.secondRank .secondRk.advert{ display: none; }
+    section.thirdRank .thirdRk.advert { display: none; }
+    
+    /*narrow banner*/
+    section.mobileBanner .banner { background: no-repeat center top; background-image: url(../images/narrowBanner.svg);  width: 100%; height: 57px; background-size: cover;}
+    
+    section.narrowBanner { background: no-repeat center top; background-image: url(../images/narrowBanner.svg); height: 57px; width: 100%; background-size: cover;}
+    
+    .row{display:none;}
+}
+    
+    @media screen and (max-width: 560px ) {
+    
+    header a.logo {top:0px;}
+        
+    header nav {display: none;}
+        
+    section.firstRank aside.pic .picture {height:300px; width:435px;}
+    section.pic aside.topPhoto { margin-left:5px; height: 100%; width: 100%;}
+    
+    section.firstRank {margin-left: 0px;}
+    section.firstRank aside.topStory { margin-left: 5%; width:90%;} 
+    section.firstRank aside.pic{ margin-left: 7%; /*padding-left: 5px; padding-right: 5px;*/}
+        
+    /*economic */
+    section.economic {margin-left: 1%; height: 300px; width: 600px;}      
+   
+    /*search*/
+    section.searchRank .topFiveSearch {width: 100%; margin-left:0%; padding-top: 10px; }
+    section.searchRank .topFiveSearch p.search { height: 45px;}
+    /*section.searchRank .topFiveSearch p img {display:none;} */   
+        
+    /*sort*/
+    section.sortRank .topFiveSearch {width: 100%; margin-left:0%; padding-top: 10px; }
+    section.sortRank .topFiveSearch p.search { height: 45px;}
+    
+    section.narrowBanner {display:none;}
+    footer {height: 140px; padding-top: 60px;}
+    /*navigation*/
+   
+    /*navigation*/
+    /*nav { margin-left: 0px; top: 1530px; width:100%;}*/
+        /*nav {left:0; position: absolute; bottom: 35px; margin-top: 40px; z-index: 999;}*/
+    
+    
+    .row { display:block; 0px; height: 50px; width: 100%; background-color:#006699; top: 10px; }
+    nav {margin-left: 0px; width:100%; bottom: -30px; }
+}/*560px*/
+
+/*an age to figure out the media screen query loses the 'and'*/
+@media screen and (max-width: 360px) {
+    
+    header { height: 90px; top: 2px;  }
+    
+    .row { height:40px; }
+    nav { bottom: -10px;}
+    
+    section.topBanner {height: 35px;}
+    section.topBanner .topBanner {height: 70px; width: 100%;  background-image:url(../images/narrowBanner.svg); background-size:auto;}
+    
+    section.firstRank aside.topStory {margin-left: 1%;}
+    section.firstRank aside.pic {margin-left: 5%; height: 247px;}
+    section.firstRank aside.pic .picture{height:240px; width:300px;}
+    /*section.pic aside.topPhoto { margin-left:5px; height: 100%; width: 100%;}*/
+    
+    /*lead*/
+    section.leadStory aside.topPhoto {height 230px; width: 300px;}
+    section.leadStory aside.topPhoto {margin-left: 5px;}
+    section.leadStory aside.topStory .top {width:300px;}
+    section.economic,section.agric, section.europe, section.britain, section.manu{ width: 300px;}
+   
+    nav { margin-left: 0px; width: 100%; top: 45%; left: 0px;}
+    nav > ul { padding-left: 1%; } 
+    nav ul ul {top: 100%;}
+    
+    nav ul li a {
+    padding: 5px 7px;
+    text-decoration: none;
+    width: 60%;
+    position: relative;
+    }
+    
+    footer { height: 70px; padding-top: 25px; widows: 50%;}
+    
+}
+        
+   
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+

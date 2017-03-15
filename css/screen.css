@@ -240,6 +240,30 @@ section.narrowBanner {
     /*padding-top: 151px;*/
 }
 
+/*submit/edit page buttons*/
+section.edit .button {
+    z-index: 1;
+    background-color: rgba(0, 102, 153, 1);
+    position:relative;
+    top: 2px; margin-left: 240px;
+    padding: 10px 0 0 0;
+    width: 60%;
+}
+
+section.edit .button ul { list-style: none; margin: 0; padding: 0px; }
+section.edit .button ul li:hover { background-color: #006699; } 
+section.edit .button ul li a {
+    display:inline-block;
+    color: #f1f9f9;
+    padding: 8px 20px;
+    text-decoration: none;
+    width: 80px;
+    position: relative;
+}
+
+section.edit .button > ul { padding-left: 50px; } /*spaces between menu buttons*/
+section.edit .button > ul > li { float: left; } /*push them across the header*/
+
 /*navigation*/
 nav {
     
@@ -560,7 +584,8 @@ footer a:hover { color: #000; }*/
     section.sortRank .topFiveSearch {width: 100%; margin-left:0%; padding-top: 10px; }
     section.sortRank .topFiveSearch p.search { height: 45px;}
     
-    section.narrowBanner {display:none;}
+    /*bottom advert*/
+    section.narrowBanner {display:inline-flex/*none*/;}
     footer {height: 140px; padding-top: 60px;}
     /*navigation*/
    

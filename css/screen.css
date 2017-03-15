@@ -399,6 +399,21 @@ footer a:hover { color: #000; }*/
     section.sortRank aside {margin-left: 1%; }
     section.sortRank .topFiveSearch {width: 800px; margin-left:1%; padding-top: 30px; }
     
+    /*submit-editor*/
+    
+    section.edit .button {
+    top: 2px; margin-left: 150px;
+    padding: 5px 0 0 0;
+    width: 60%;
+    float:left  ;
+}
+    section.edit .button ul li a {
+    padding: 8px 20px;
+    text-decoration: none;
+    width: 40px;
+
+    }
+    
     /*navigation*/
     nav { margin-left: 13%; width: 80%; top: 51%; left: 30px;}
     nav > ul { padding-left: 4%; } /*spaces between menu buttons*/
@@ -530,11 +545,20 @@ footer a:hover { color: #000; }*/
     /*search box*/
     #search form input[type=search] { position: relative; top: -48px; left:400px ; }
     
-    /*navigation*/
-    /*nav { position:static; width: auto; padding: 20px 15px; background-color: #006699; }
-    nav {margin-left: 75px; top: 45%; width: 76%;}
-    nav ul { padding-left: 20px; }*/
+    /*submit*/
+    section.story .textBox { margin-left: 10%;}
+    section.edit { margin-left: 0%;}
+    section.edit .button {margin-left: 10%;}
     
+    section.edit .button ul li a {
+    padding: 8px 20px;
+    text-decoration: none;
+    width: 20px;
+    }
+    
+    section.edit a { margin-left: 25%; font-weight: 500; margin-right: 50px;}
+    
+    /*navigation*/
     nav { margin-left: 155px; width: 90%; top: 45%; left: 1px;}
     nav > ul { padding-left: 2%; } 
     nav ul ul {top: 100%;}

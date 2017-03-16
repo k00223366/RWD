@@ -22,14 +22,14 @@ a.btn { font-size: 1.6em; text-decoration: none; color: #006699; border: 1px sol
 a.btn:hover {background-color: rgba(0,0,0,.3); }
 
 /* Header */
-header { height: 200px; background: #006699 ; position: relative; }
+header { height: 180px; background: #006699 ; position: relative; }
 
 header a.logo {
     z-index: 1;
     position: absolute;
     display: block; width: 300px; height: 160px;
     background: url(../images/breakingBrexitLogo.svg) no-repeat 0 0; background-size: contain; 
-    top: 15px; left: 20px;
+    top: 11px; left: 20px;
 }
 
 header a.logo span {display: none; }
@@ -128,12 +128,13 @@ section.story .textBox { margin-left: 20%; width: 60%; height: 500px; background
 /*firstRank*/
 section.firstRank {background-color: rgba(168,183,188, .2);}
 section.firstRank aside{ width: 50%; float: left; }
-section.firstRank aside .top{ padding-left: 10px; padding-right: 5px;}
+
+section.firstRank aside.topStory{ padding-left: 10px; width: 45%; padding-right: 5px;}
 
 section.firstRank aside .top h2 a {font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; }
 section.firstRank aside .top h2 a:hover {text-decoration:underline;} 
 
-section.firstRank aside.pic { height: 305px; width: 600px;}
+section.firstRank aside.pic { height: 405px; width: auto ;}
 section.firstRank aside .picture { background: no-repeat center center; background-image: url(../images/TheresaMay_EndaKenny.png); /*height: 100%; width: 99%; padding-top: 30%;*/}
 section.firstRank aside.pic .picture a.clickable {display: block; height: 490px; width: 600px;}
 section.firstRank aside.pic .picture a.clickable span {display: none;}
@@ -230,7 +231,7 @@ section.topBanner {
 }
 section.topBanner  .topBanner{
     
-    margin-top: 5px; margin-left: 0px; height: 150px;/*height: 100%;*/ background: url(../images/eventBriteTopAd_E.svg) no-repeat center top; background-size: cover; 
+    margin-top: 5px; height: 145px; background: url(../images/eventBriteTopAd_E.svg) no-repeat center top; background-size:cover; 
     /*border: 2px solid darkblue; */
     }
 
@@ -265,17 +266,17 @@ section.edit .button > ul { padding-left: 50px; } /*spaces between menu buttons*
 section.edit .button > ul > li { float: left; } /*push them across the header*/
 
 /*navigation*/
+
 nav {
-    
     background-color: rgba(0, 102, 153, 1) /*rgba(0,0,0, .3)*/;
     position: relative;
-    top: 152px; margin-left:240px;
-    padding: 10px 0 0 0;
-    width: 80%;
+    top: 125px;
+    padding: 9px 0 0 0;
+    width: 100%; 
 }
 
 nav::after { content:''; display: block; clear: both; } /*<!--??-->*/
-nav ul { list-style: none; margin: 0; padding: 0px; }
+nav ul { list-style: none; margin: 0px; padding: 0px;}
 nav ul li:hover { background-color: #006699; } /*they go black on hover*/
 
 nav ul li:hover > ul {display:block;}
@@ -283,30 +284,24 @@ nav ul li:hover > ul {display:block;}
 nav ul li a {
     display: inline-block;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 10px;
     text-decoration: none;
-    width: 80px;
+    width: 70px;
     position: relative;
 }
 
 nav ul li a:visited { color: #fff; }
 nav ul li a:hover { background-color: #2996BA; } /*change from red colour*/
 
-nav ul ul {position: absolute; top: 100%; background-color: #2996BA; display: none;}
+nav ul ul {position: absolute; top: 100%; background-color: #006699/*#2996BA*/; display: none;}
 nav ul ul li { position: relative; }
 
 /*top level*/
 nav > ul { padding-left: 317px; } /*spaces between menu buttons*/
 nav > ul > li { float: left; } /*push them across the header*/
+nav > ul > li > a{ width: auto; padding: 10px 20px 10px 20px;}
 
 /*search*/
-
-/*#search {
-    background-color: deeppink;
-    max-width: 50%;
-    float:right; 
-}*/
-
 #search input {
     background-color: white;
     height: 26px;
@@ -350,18 +345,25 @@ footer a:hover { color: #000; }*/
 {
     header {height: 150px;}
     header a.logo {width:250px; height: 140px; top:9px;}
-    /*section.firstRank aside .picture { height: 300px; width: 600px; }*/
-    section.firstRank aside.pic {margin-left: 20%;}
-    section.firstRank aside.pic .picture { height: 300px; width: 600px; }
+    
     nav { top: 102px; margin-left:5px;}
+    
+    section.firstRank aside.topStory { width: 45%;}
+    /*section.firstRank aside.topStory .top p.fourth {display:none;}*/
+    
+    section.firstRank aside.pic {margin-left: 1%;}
+    section.firstRank aside.pic.picture {padding-top: 7%;}
+    /*section.firstRank aside.pic .picture {height: 100%; width:70%;}*/
+    /*section.firstRank aside.pic {margin-left: 20%;}
+    section.firstRank aside.pic .picture { height: 300px; width: 600px; }
     section.firstRank aside{margin-left: 20%;}
     
     nav ul li a {
     /*padding: 10px 20px;*/
     /*text-decoration: none;*/
-    width: 50%;
+    /*width: 50%;
     position: relative;
-    }
+    }*/
     
     /*second and third row adverts*/ 
     section.secondRank .secondRk.advert { background-size: 300px 300px; padding-top: 300px;}
@@ -374,7 +376,7 @@ footer a:hover { color: #000; }*/
     /* header */  
     section.topBanner {height: 125px;}
     
-    header { height: 100px; }
+    header { height: 99px; }
     header a.logo { width: 170px; height: 90px; top: 6px;}
     
     h1 {font-size: 2.4em; }
@@ -405,17 +407,17 @@ footer a:hover { color: #000; }*/
     top: 2px; margin-left: 150px;
     padding: 5px 0 0 0;
     width: 60%;
-    float:left  ;
-}
+    float:left ;
+    }
+    
     section.edit .button ul li a {
     padding: 8px 20px;
     text-decoration: none;
     width: 40px;
-
     }
     
     /*navigation*/
-    nav { margin-left: 13%; width: 80%; top: 51%; left: 30px;}
+    nav { margin-left: 25%; width: 100%; top: 52%; left: 10px;}
     nav > ul { padding-left: 4%; } /*spaces between menu buttons*/
     /*nav > ul { float: left; } /*push them across the header*/
 
@@ -559,7 +561,7 @@ footer a:hover { color: #000; }*/
     section.edit a { margin-left: 25%; font-weight: 500; margin-right: 50px;}
     
     /*navigation*/
-    nav { margin-left: 155px; width: 90%; top: 45%; left: 1px;}
+    nav { margin-left: 155px; width: 90%; top: 45%; left: 0px;}
     nav > ul { padding-left: 2%; } 
     nav ul ul {top: 100%;}
     /*nav ul,
@@ -585,15 +587,16 @@ footer a:hover { color: #000; }*/
     
     @media screen and (max-width: 560px ) {
     
-    header a.logo {top:0px;}
+    section.topBanner { height: 70px;}
+    header a.logo { margin-left:-20px; top: 5px; width:100%; background: url(../images/v3LogoBrexit.svg) no-repeat center top; background-size:contain;}
         
     header nav {display: none;}
-        
-    section.firstRank aside.pic .picture {height:300px; width:435px;}
+    section.firstRank aside.pic {height: 310px; }     
+    section.firstRank aside.pic .picture {margin-left: 1%; height:100%; width:80%;}
     section.pic aside.topPhoto { margin-left:5px; height: 100%; width: 100%;}
     
     section.firstRank {margin-left: 0px;}
-    section.firstRank aside.topStory { margin-left: 5%; width:90%;} 
+    section.firstRank aside.topStory { margin-left: 6%; width:90%;} 
     section.firstRank aside.pic{ margin-left: 7%; /*padding-left: 5px; padding-right: 5px;*/}
         
     /*economic */
@@ -611,21 +614,55 @@ footer a:hover { color: #000; }*/
     /*bottom advert*/
     section.narrowBanner {display:inline-flex/*none*/;}
     footer {height: 140px; padding-top: 60px;}
-    /*navigation*/
-   
-    /*navigation*/
-    /*nav { margin-left: 0px; top: 1530px; width:100%;}*/
-        /*nav {left:0; position: absolute; bottom: 35px; margin-top: 40px; z-index: 999;}*/
+        
+    /*secondRank*/
+    section.secondRank aside {width: 100%;}  
+        
+    section.secondRank .secondRk.firstArticle a.clickable { width: 500px; margin-top:2%; background-size: 50% 150px; padding-top: 155px; }
+    section.secondRank .secondRk.secondArticle a.clickable { width: 500px; margin-top:2%; background-size: 50% 150px; padding-top: 155px; }
+    section.secondRank aside .secondRk.firstArticle p.second { display:block;}
+    section.secondRank aside .secondRk.secondArticle p.second { display:block;} 
+        
+    /*thirdRank*/
+    section.thirdRank aside {width: 100%;}  
+    section.thirdRank .thirdRk.firstArticle a.clickable { width: 500px; margin-top:2%; background-size: 50% 150px; padding-top: 155px; }
+    section.thirdRank .thirdRk.secondArticle a.clickable { width: 500px; margin-top:2%; background-size: 50% 150px; padding-top: 155px; }
+    section.thirdRank aside .thirdRk.firstArticle p.second { display:block;}
+    section.thirdRank aside .thirdRk.secondArticle p.second { display:block;}   
     
+    /*navigation*/
+    .row {display:block; 0px; height: 1px; width: 100%; background-color:#006699;}
+        
+    nav {margin-left: 0px; width:100%; margin-bottom: 15px;}
+        
+    nav ul,
+    nav ul ul {display: block; position: static;}
+    nav ul li:hover { background: none; /*#f1f9f9;*/ }    
+    nav ul li { float:none; margin-top: 0px;}
     
-    .row { display:block; 0px; height: 50px; width: 100%; background-color:#006699; top: 10px; }
-    nav {margin-left: 0px; width:100%; bottom: -30px; }
+    nav ul li:hover {background: none;}
+        /*nav ul li a:hover {background:none;}*/
+        
+    nav ul li a {
+            width: auto;
+            display:block;
+            margin: 8px 10px;
+            padding: 12px 15px;
+            border: 1px solid white;      
+    }
+        
+    nav ul ul {background:none;}
+    nav ul ul li a { margin-left: 50px; }
+        
+    footer { margin-top: 480px;}
+        
+    footer div.content { display: block; margin-top: 15px;}
 }/*560px*/
 
-/*an age to figure out the media screen query loses the 'and'*/
+
 @media screen and (max-width: 360px) {
     
-    header { height: 90px; top: 2px;  }
+    header { height: 59px; top: 2px;  }
     
     .row { height:40px; }
     nav { bottom: -10px;}
@@ -655,7 +692,7 @@ footer a:hover { color: #000; }*/
     position: relative;
     }
     
-    footer { height: 70px; padding-top: 25px; widows: 50%;}
+    /*footer { height: 70px; padding-top: 25px; widows: 50%;}*/
     
 }
         

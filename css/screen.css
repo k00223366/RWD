@@ -81,7 +81,7 @@ section.manu aside.topPhoto .picture{ margin-left: 10%;  background: no-repeat c
 section.searchRank .topFiveSearch {width: 900px; margin-left: 10%; padding-top: 30px; }
 
 section.searchRank h2 { margin-left: 20%; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color: white;}
-section.searchRank h3 { margin-left: 20%; font-family: 'effra'; font-weight: 200; font-style: normal; text-decoration:none; color: white;}
+section.searchRank h3 { margin-left: 25%; font-family: 'effra'; font-weight: 100; font-style: normal; text-decoration:none; color: white;}
 section.searchRank .topFiveSearch /*p.first,p.second,p.third, p.fourth, p.fifth*/ { background-color: #2996BA; font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; color:#006699; }   
 /*clickable search*/
 section.searchRank .topFiveSearch p.search {margin-left: 5%; background-color: #f1f9f9; width: 80%; height: 90px;}
@@ -673,8 +673,8 @@ footer a:hover { color: #000; }*/
     section.topBanner .topBanner {height: 70px; width: 100%;  background-image:url(../images/narrowBanner.svg); background-size:auto;}
     
     section.firstRank aside.topStory {margin-left: 0%;}
-    section.firstRank aside.pic {margin-left: 0%; height: 247px;}
-    section.firstRank aside.pic .picture{height:95%/*240px*/; width:60%/*300px*/;}
+    section.firstRank aside.pic {margin-left: 2%; width: 100%; height: 200px/*247px*/; padding-bottom: 10px;}
+    /*section.firstRank aside.pic .picture{height:75%/*240px;}*/
     /*section.pic aside.topPhoto { margin-left:5px; height: 100%; width: 100%;}*/
     
     section.secondRank aside .secondRk.firstArticle a.clickable{margin-left: -90px;}
@@ -688,6 +688,13 @@ footer a:hover { color: #000; }*/
     section.leadStory aside.topPhoto {margin-left: 5px;}
     section.leadStory aside.topStory .top {width:300px;}
     section.economic,section.agric, section.europe, section.britain, section.manu{ width: 300px;}
+    
+    /*search*/
+    section.searchRank h2 { margin-left: 12%;}
+    section.searchRank h3 { margin-left: 12%;}
+    section.searchRank aside .topFiveSearch p.search {margin-left: 6%;}
+    section.searchRank .topFiveSearch p.search {margin: 0 0 0.8em 0; font-size: 1em; font-weight: 100;
+    }
     
     /*banners*/
     section.mobileBanner .banner { height: 35px;}

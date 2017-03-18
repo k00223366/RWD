@@ -3,7 +3,7 @@
 
 body { font-family: 'Open Sans', sans-serif; font-size: 16px; font-weight: 300; color: #555; margin: 0; padding: 0; }
 
-#page { max-width: 1200px; margin: 0 auto; background-color: rgba(168,183,188, .2); position: relative; }
+#page { max-width: 1200px; margin: 0 auto; background-color: white /*rgba(168,183,188, .2)*/; position: relative; }
 
 /* Text */
 h1 { margin: 0 0 1em 0; font-size: 2.8em; font-weight: 700; }
@@ -131,11 +131,12 @@ section.firstRank aside{ width: 50%; float: left; }
 
 section.firstRank aside.topStory{ padding-left: 10px; width: 45%; padding-right: 5px;}
 
+section.firstRank aside .top {margin-top: 5px;}
 section.firstRank aside .top h2 a {font-family: 'effra'; font-weight: 400; font-style: normal; text-decoration:none; }
 section.firstRank aside .top h2 a:hover {text-decoration:underline;} 
 
 section.firstRank aside.pic { height: 405px; width: auto ;}
-section.firstRank aside .picture { background: no-repeat center center; background-image: url(../images/TheresaMay_EndaKenny.png); /*height: 100%; width: 99%; padding-top: 30%;*/}
+section.firstRank aside .picture { background: no-repeat center center; background-image: url(../images/TheresaMay_EndaKenny.png); /*height: 100%; width: 99%; padding-top: 30%;*/margin-bottom: 5px;}
 section.firstRank aside.pic .picture a.clickable {display: block; height: 490px; width: 600px;}
 section.firstRank aside.pic .picture a.clickable span {display: none;}
 
@@ -351,7 +352,7 @@ footer a:hover { color: #000; }*/
     section.firstRank aside.topStory { width: 45%;}
     /*section.firstRank aside.topStory .top p.fourth {display:none;}*/
     
-    section.firstRank aside.pic {margin-left: 1%;}
+    section.firstRank aside.pic {margin-top:3%; width: 45%;}
     section.firstRank aside.pic.picture {padding-top: 7%;}
     /*section.firstRank aside.pic .picture {height: 100%; width:70%;}*/
     /*section.firstRank aside.pic {margin-left: 20%;}
@@ -383,9 +384,9 @@ footer a:hover { color: #000; }*/
     h2 {font-size: 1.8em; font-weight: 500; }
     
     /*top news story*/
-    section.firstRank aside.pic{margin-left: 14%;}
-    section.firstRank aside .top p.third, p.fourth { display: none; }    
-    section.firstRank aside .picture { height: 300px; width: 600px; }
+    section.firstRank aside.pic{margin-left: 1%; margin-top:1%; height: 80%;}
+    section.firstRank aside .top /*p.third,*/ p.fourth { display: none; }    
+    /*section.firstRank aside .picture { height: 300px; width: 600px; }*/
     
     section.leadStory {margin-left: 2%;}
     section.leadStory .topPhoto.picture{margin-left: 2%;}
@@ -464,8 +465,6 @@ footer a:hover { color: #000; }*/
     h2 { font-size: 1.4em;}
     h3 { font-size: 1.1em; font-weight: 700; }
     
-    
-    
     section.topBanner { margin-left: 0px; width: 100%; height: 105px;}
     
     /*header*/
@@ -475,8 +474,8 @@ footer a:hover { color: #000; }*/
     header a.logo {top: 2px; width: 150px;}
     
     /*main photo*/
-    section.firstRank aside.topStory {margin-left: 12%; width: 80%; }
-    section.firstRank aside.pic {margin-left: 13%;}
+    section.firstRank aside.topStory {margin-left: 10%; width: 60%; }
+    section.firstRank aside.pic {margin-left: 10%; height: 70%; width: 60%;}
     
     /*lead*/
     section.leadStory {margin-left: 5px; width: 500px; height: 300px;}
@@ -530,17 +529,14 @@ footer a:hover { color: #000; }*/
     /*switch off the div for the ads allowing the stories to float right*/
     section.secondRank aside.sqAdd { width: 0%; height: 0%;}
     
-    section.secondRank aside  {  margin-left: 5%; width: 40%; }
+    section.secondRank aside  {  margin-left: 0%; width: 40%; }
     /*section.secondRank .secondRk {background-image: 250px; 150px; }*/
     
     /*section.secondRank .secondRk.firstArticle {background-size: 1000px 100px;}*/
     section.secondRank .secondRk.firstArticle a.clickable{margin-left: 1px; background-size: 200px 130px; /*padding-top: 155px;*/  }
     section.secondRank .secondRk.secondArticle a.clickable{margin-left: 1px;background-size: 200px 130px; /*padding-top: 155px;*/  }
     
-    /*section.thirdRank aside.sqAdd { width: 0%; height: 0%;}
-    section.thirdRank aside  { width: 40%; }
-    section.thirdRank .thirdRk { margin:0px; background: no-repeat center top; background-size: 190px 145px; /*padding-top: 155px; }*/
-    section.thirdRank aside  {  margin-left: 5%; width: 40%; }
+    section.thirdRank aside  {  margin-left: 0%; width: 40%; }
     section.thirdRank .thirdRk.firstArticle a.clickable{margin-left: 1px; background-size: 200px 130px; /*padding-top: 155px;*/  }
     section.thirdRank .thirdRk.secondArticle a.clickable{margin-left: 1px;background-size: 200px 130px; /*padding-top: 155px;*/  }
     
@@ -591,13 +587,14 @@ footer a:hover { color: #000; }*/
     header a.logo { margin-left:-20px; top: 5px; width:100%; background: url(../images/v3LogoBrexit.svg) no-repeat center top; background-size:contain;}
         
     header nav {display: none;}
-    section.firstRank aside.pic {height: 310px; }     
-    section.firstRank aside.pic .picture {margin-left: 1%; height:100%; width:80%;}
+        
+    section.firstRank aside.pic {margin-left: 2%; height: 300px; width: 450px; }     
+    section.firstRank aside.pic .picture {height:100%; width:100%;}
     section.pic aside.topPhoto { margin-left:5px; height: 100%; width: 100%;}
     
     section.firstRank {margin-left: 0px;}
-    section.firstRank aside.topStory { margin-left: 6%; width:90%;} 
-    section.firstRank aside.pic{ margin-left: 7%; /*padding-left: 5px; padding-right: 5px;*/}
+    section.firstRank aside.topStory { margin-left: 0%; width:95%;} 
+    /*section.firstRank aside.pic{ margin-left: 0%; /*padding-left: 5px; padding-right: 5px;}*/
         
     /*economic */
     section.economic {margin-left: 1%; height: 300px; width: 600px;}      
@@ -616,19 +613,24 @@ footer a:hover { color: #000; }*/
     footer {height: 140px; padding-top: 60px;}
         
     /*secondRank*/
-    section.secondRank aside {width: 100%;}  
+    section.secondRank aside {width: 100%; margin-left: 0%;}  
         
-    section.secondRank .secondRk.firstArticle a.clickable { width: 500px; margin-top:2%; background-size: 50% 150px; padding-top: 155px; }
-    section.secondRank .secondRk.secondArticle a.clickable { width: 500px; margin-top:2%; background-size: 50% 150px; padding-top: 155px; }
+    section.secondRank .secondRk.firstArticle a.clickable { margin-left: -5%; width: 500px; margin-top:2%; background-size: 50% 100%; padding-top: 155px; }
+    section.secondRank .secondRk.secondArticle a.clickable { margin-left: -5%; width: 500px; margin-top:2%; background-size: 50% 100%; padding-top: 155px; }
     section.secondRank aside .secondRk.firstArticle p.second { display:block;}
     section.secondRank aside .secondRk.secondArticle p.second { display:block;} 
         
     /*thirdRank*/
-    section.thirdRank aside {width: 100%;}  
-    section.thirdRank .thirdRk.firstArticle a.clickable { width: 500px; margin-top:2%; background-size: 50% 150px; padding-top: 155px; }
-    section.thirdRank .thirdRk.secondArticle a.clickable { width: 500px; margin-top:2%; background-size: 50% 150px; padding-top: 155px; }
+    section.thirdRank aside {width: 100%; margin-left: 0%;}  
+    section.thirdRank .thirdRk.firstArticle a.clickable { margin-left: -5%; width: 500px; margin-top:2%; background-size: 50% 100%; padding-top: 155px; }
+    section.thirdRank .thirdRk.secondArticle a.clickable { margin-left: -5%; width: 500px; margin-top:2%; background-size: 50% 100%; padding-top: 155px; }
     section.thirdRank aside .thirdRk.firstArticle p.second { display:block;}
-    section.thirdRank aside .thirdRk.secondArticle p.second { display:block;}   
+    section.thirdRank aside .thirdRk.secondArticle p.second { display:block;}  
+        
+        
+    section.mobileBanner .banner { height: 57px;}
+    
+    section.narrowBanner { height: 57px;}
     
     /*navigation*/
     .row {display:block; 0px; height: 1px; width: 100%; background-color:#006699;}
@@ -654,7 +656,7 @@ footer a:hover { color: #000; }*/
     nav ul ul {background:none;}
     nav ul ul li a { margin-left: 50px; }
         
-    footer { margin-top: 480px;}
+    footer { margin-top: 400px;}
         
     footer div.content { display: block; margin-top: 15px;}
 }/*560px*/
@@ -670,16 +672,27 @@ footer a:hover { color: #000; }*/
     section.topBanner {height: 35px;}
     section.topBanner .topBanner {height: 70px; width: 100%;  background-image:url(../images/narrowBanner.svg); background-size:auto;}
     
-    section.firstRank aside.topStory {margin-left: 1%;}
-    section.firstRank aside.pic {margin-left: 5%; height: 247px;}
-    section.firstRank aside.pic .picture{height:240px; width:300px;}
+    section.firstRank aside.topStory {margin-left: 0%;}
+    section.firstRank aside.pic {margin-left: 0%; height: 247px;}
+    section.firstRank aside.pic .picture{height:95%/*240px*/; width:60%/*300px*/;}
     /*section.pic aside.topPhoto { margin-left:5px; height: 100%; width: 100%;}*/
+    
+    section.secondRank aside .secondRk.firstArticle a.clickable{margin-left: -90px;}
+    section.secondRank aside .secondRk.secondArticle a.clickable{margin-left: -90px;}
+    
+    section.thirdRank aside .thirdRk.firstArticle a.clickable{margin-left: -90px;}
+    section.thirdRank aside .thirdRk.secondArticle a.clickable{margin-left: -90px;}
     
     /*lead*/
     section.leadStory aside.topPhoto {height 230px; width: 300px;}
     section.leadStory aside.topPhoto {margin-left: 5px;}
     section.leadStory aside.topStory .top {width:300px;}
     section.economic,section.agric, section.europe, section.britain, section.manu{ width: 300px;}
+    
+    /*banners*/
+    section.mobileBanner .banner { height: 35px;}
+    
+    section.narrowBanner { height: 35px;}
    
     nav { margin-left: 0px; width: 100%; top: 45%; left: 0px;}
     nav > ul { padding-left: 1%; } 
@@ -691,6 +704,8 @@ footer a:hover { color: #000; }*/
     width: 60%;
     position: relative;
     }
+    
+    footer { margin-top: 280px;}
     
     /*footer { height: 70px; padding-top: 25px; widows: 50%;}*/
     
